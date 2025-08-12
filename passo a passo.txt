@@ -1,0 +1,189 @@
+# 🌍 Site U.M.E.C. - União Mundial de Ministros do Bem e Empreendedores dos Continentes
+
+## 📋 Descrição
+
+Site institucional completo para a U.M.E.C., uma organização não governamental que congrega ministros, líderes e empreendedores engajados na promoção do bem-estar social, solidariedade e desenvolvimento econômico em diversos continentes.
+
+## ✨ Características
+
+- **Design Responsivo**: Funciona perfeitamente em todos os dispositivos
+- **Cores Personalizadas**: Seguindo exatamente a paleta de cores especificada
+- **Fontes Elegantes**: Playfair Display, Lato, Raleway e Inter do Google Fonts
+- **Animações Suaves**: Efeitos visuais modernos e profissionais
+- **Navegação Intuitiva**: Menu fixo com scroll suave
+- **Funcionalidades Interativas**: Botões de doação, copiar PIX, etc.
+
+## 🎨 Paleta de Cores
+
+```css
+:root {
+  --cor-principal: #A28B42;      /* Dourado principal */
+  --fundo-pagina: #F3F1EB;       /* Fundo bege claro */
+  --cor-secundaria: #6D5E2E;     /* Dourado escuro */
+  --cor-titulo: #2E2C26;         /* Preto para títulos */
+  --cor-subtitulo: #4B4739;      /* Marrom escuro */
+  --cor-texto: #5A564C;          /* Marrom para texto */
+  --cor-clara: #FFFFFF;          /* Branco */
+}
+```
+
+## 🔤 Fontes Utilizadas
+
+- **Playfair Display**: Títulos principais e hero sections
+- **Lato**: Texto base e parágrafos
+- **Raleway**: Subtítulos e destaques
+- **Inter**: Interface e navegação
+
+## 📱 Seções do Site
+
+### 1. **Header/Navegação**
+- Logo da U.M.E.C.
+- Menu de navegação responsivo
+- Botão "Doe Agora" destacado
+
+### 2. **Hero Section**
+- Título principal "U.M.E.C."
+- Subtítulo explicativo
+- Descrição da organização
+- Botão "Conheça o Projeto"
+- Fundo com mapa mundial estilizado
+
+### 3. **Quem Somos Nós**
+- Logo grande da organização
+- Texto explicativo sobre a missão
+- Valores e objetivos da U.M.E.C.
+
+### 4. **Como Apoiar o Projeto**
+- **Doação Financeira**: Com chave PIX e botão para copiar
+- **Doação de Roupas**: Endereço para entrega
+- **Doação de Alimentos**: Endereço para entrega
+
+### 5. **Nosso Impacto**
+- **Ações Já Realizadas**: Estatísticas e números
+- **Projetos em Andamento**: Status e descrições
+
+### 6. **Galeria de Fotos e Vídeos**
+- Grid responsivo para mídia
+- Placeholders para futuras imagens
+- Suporte para fotos e vídeos
+
+### 7. **Parceiros**
+- Instituto ABC
+- Outras organizações parceiras
+- Logos e descrições
+
+### 8. **Contato e Informações**
+- Endereço da sede
+- Telefone e e-mail
+- Links para redes sociais
+
+### 9. **Slogan**
+- Frase motivacional da organização
+- "Transformando Vidas, Construindo Futuros"
+
+### 10. **Footer**
+- Informações de copyright
+- Links rápidos
+- Dados de contato
+
+## 🚀 Como Usar
+
+### 1. **Instalação**
+```bash
+# Clone ou baixe os arquivos
+# Abra o index.html em um navegador
+```
+
+### 2. **Personalização**
+
+#### **Cores**
+Edite as variáveis CSS no arquivo `style.css`:
+```css
+:root {
+  --cor-principal: #A28B42;  /* Sua cor principal */
+  --fundo-pagina: #F3F1EB;   /* Seu fundo */
+  /* ... outras cores */
+}
+```
+
+#### **Conteúdo**
+- **HTML**: Edite o `index.html` para alterar textos e informações
+- **Imagens**: Substitua as imagens na pasta `img/`
+- **Links**: Atualize URLs das redes sociais e contatos
+
+#### **Funcionalidades**
+- **JavaScript**: Modifique o `script.js` para novas funcionalidades
+- **Formulários**: Adicione campos de contato se necessário
+
+### 3. **Deploy**
+- Faça upload dos arquivos para seu servidor web
+- Certifique-se de que todos os arquivos estão na mesma pasta
+- Teste em diferentes dispositivos e navegadores
+
+## 📁 Estrutura de Arquivos
+
+```
+umec/
+├── index.html          # Página principal
+├── style.css           # Estilos CSS
+├── script.js           # Funcionalidades JavaScript
+├── img/                # Pasta de imagens
+│   └── logo.png        # Logo da U.M.E.C.
+├── elementos para a pagina.txt  # Especificações do projeto
+├── cores.txt           # Paleta de cores
+└── README.md           # Este arquivo
+```
+
+## 🔧 Funcionalidades JavaScript
+
+- **Menu Mobile**: Navegação responsiva para dispositivos móveis
+- **Scroll Suave**: Navegação interna com animação
+- **Copiar PIX**: Botão para copiar chave PIX automaticamente
+- **Animações**: Elementos que aparecem conforme o scroll
+- **Contadores**: Números que se animam na seção de impacto
+- **Scroll to Top**: Botão para voltar ao topo da página
+- **Notificações**: Sistema de alertas para ações do usuário
+
+## 📱 Responsividade
+
+O site é totalmente responsivo e funciona em:
+- **Desktop**: 1200px+
+- **Tablet**: 768px - 1199px
+- **Mobile**: 320px - 767px
+
+## 🌐 Compatibilidade
+
+- **Navegadores Modernos**: Chrome, Firefox, Safari, Edge
+- **Dispositivos**: Desktop, tablet, smartphone
+- **Sistemas**: Windows, macOS, Linux, iOS, Android
+
+## 📞 Informações de Contato
+
+Para personalizações ou dúvidas sobre o site:
+
+- **E-mail**: contato@umeccontinente.org
+- **Telefone**: +55 (11) 99999-9999
+- **Endereço**: Rua das Flores, 123 - Centro, São Paulo - SP
+
+## 🤝 Como Contribuir
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
+5. Abra um Pull Request
+
+## 📄 Licença
+
+Este projeto foi desenvolvido para a U.M.E.C. e está sob licença de uso exclusivo da organização.
+
+## 🙏 Agradecimentos
+
+- Instituto ABC - Associação Brasileira de Benefícios à Comunidade
+- Todos os voluntários e parceiros da U.M.E.C.
+- Comunidades beneficiadas pelos projetos da organização
+
+---
+
+**U.M.E.C.** - Transformando Vidas, Construindo Futuros 🌟
+#
