@@ -8,6 +8,8 @@
     --cor-texto: #5A564C;
     --cor-clara: #FFFFFF;
 
-    --fonte-titulo: 'Playfair', serif;
-    --fonte-texto: 'Lato', sans-serif; /* extra bold para títulos e thin para texto */
+    --fonte-titulo: 'Playfair Display', serif;
+    --fonte-texto: 'Lato', sans-serif;
+    --fonte-destaque: 'Raleway', sans-serif;
+    --fonte-interface: 'Inter', sans-serif;
 }
