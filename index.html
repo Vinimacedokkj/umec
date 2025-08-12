@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>U.M.E.C. - União Mundial de Ministros do Bem e Empreendedores dos Continentes</title>
+    <meta name="description" content="Organização que congrega ministros, líderes e empreendedores engajados na promoção do bem-estar social, solidariedade e desenvolvimento econômico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&family=Raleway:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="var.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.png" alt="U.M.E.C. Logo" class="logo-img">
+            </div>
+            <nav class="nav">
+                <ul class="nav-list">
+                    <li><a href="#inicio" class="nav-link">Início</a></li>
+                    <li><a href="#quem-somos" class="nav-link">Quem Somos</a></li>
+                    <li><a href="#como-apoiar" class="nav-link">Como Apoiar</a></li>
+                    <li><a href="#nosso-impacto" class="nav-link">Nosso Impacto</a></li>
+                    <li><a href="#galeria" class="nav-link">Galeria</a></li>
+                    <li><a href="#parceiros" class="nav-link">Parceiros</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+            <a href="#como-apoiar" class="btn-doe">Doe Agora</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-bg">
+            <div class="world-map"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">U.M.E.C.</h1>
+                <h2 class="hero-subtitle">União Mundial de Ministros do Bem e Empreendedores dos Continentes</h2>
+                <p class="hero-description">
+                    É uma organização que congrega ministros, líderes e empreendedores engajados na promoção do bem-estar social, da solidariedade e do desenvolvimento econômico em diversos continentes.
+                </p>
+                <a href="#quem-somos" class="btn-primary">Conheça o Projeto</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quem Somos -->
+    <section id="quem-somos" class="quem-somos">
+        <div class="container">
+            <div class="quem-somos-content">
+                <div class="quem-somos-visual">
+                    <div class="logo-grande">
+                        <img src="img/logo.png" alt="U.M.E.C. Logo Grande" class="logo-grande-img">
+                    </div>
+                </div>
+                <div class="quem-somos-texto">
+                    <h2 class="section-title">Quem Somos Nós</h2>
+                    <div class="text-content">
+                        <p>
+                            A UMEC visa estabelecer um ambiente colaborativo para indivíduos atuantes em causas sociais e no universo do empreendedorismo. Através dessa união, a organização fomenta iniciativas com o potencial de gerar um impacto positivo significativo nas comunidades.
+                        </p>
+                        <p>
+                            Essas iniciativas abrangem uma variedade de ações, incluindo projetos sociais, programas de capacitação profissional e apoio a micro e pequenas empresas. Adicionalmente, a UMEC organiza eventos, conferências e treinamentos com o propósito de disseminar conhecimento, compartilhar boas práticas e estimular a formação de parcerias estratégicas entre seus membros, que dedicam seu trabalho voluntariamente em prol do próximo.
+                        </p>
+                        <p>
+                            Para informações detalhadas sobre a UMEC, como seus eventos, programas em andamento ou o processo de adesão, recomenda-se consultar o site oficial e os perfis nas redes sociais da organização. É importante ressaltar que todas as ações da UMEC são realizadas em colaboração com o Instituto ABC - Associação Brasileira de Benefícios à Comunidade e outras entidades parceiras.
+                        </p>
+                    </div>
+                    <a href="#nosso-impacto" class="link-saiba-mais">
+                        Saiba mais <i class="fas fa-chevron-down"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como Apoiar -->
+    <section id="como-apoiar" class="como-apoiar">
+        <div class="container">
+            <h2 class="section-title">Como Apoiar o Projeto</h2>
+            <div class="apoio-content">
+                <div class="apoio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-hand-holding-heart"></i>
+                    </div>
+                    <h3>Doação Financeira</h3>
+                    <p>Contribua com qualquer valor para apoiar nossos projetos sociais e humanitários.</p>
+                    <div class="pix-info">
+                        <h4>Chave PIX:</h4>
+                        <p class="pix-key">contato@umeccontinente.org</p>
+                        <button class="btn-copy" onclick="copyPix()">
+                            <i class="fas fa-copy"></i> Copiar
+                        </button>
+                    </div>
+                </div>
+                <div class="apoio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tshirt"></i>
+                    </div>
+                    <h3>Doação de Roupas</h3>
+                    <p>Roupas em bom estado são sempre bem-vindas para famílias necessitadas.</p>
+                    <div class="endereco-info">
+                        <h4>Endereço para Doação:</h4>
+                        <p>Rua das Flores, 123 - Centro<br>São Paulo - SP, 01234-567</p>
+                    </div>
+                </div>
+                <div class="apoio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Doação de Alimentos</h3>
+                    <p>Alimentos não perecíveis para nossas campanhas de combate à fome.</p>
+                    <div class="endereco-info">
+                        <h4>Endereço para Doação:</h4>
+                        <p>Rua das Flores, 123 - Centro<br>São Paulo - SP, 01234-567</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nosso Impacto -->
+    <section id="nosso-impacto" class="nosso-impacto">
+        <div class="container">
+            <h2 class="section-title">Nosso Impacto</h2>
+            <div class="impacto-content">
+                <div class="impacto-realizado">
+                    <h3>Ações Já Realizadas</h3>
+                    <div class="impacto-grid">
+                        <div class="impacto-item">
+                            <div class="impacto-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h4>+5.000 Famílias Atendidas</h4>
+                            <p>Distribuição de alimentos e roupas em comunidades carentes</p>
+                        </div>
+                        <div class="impacto-item">
+                            <div class="impacto-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h4>+200 Profissionais Capacitados</h4>
+                            <p>Programas de treinamento e desenvolvimento profissional</p>
+                        </div>
+                        <div class="impacto-item">
+                            <div class="impacto-icon">
+                                <i class="fas fa-globe-americas"></i>
+                            </div>
+                            <h4>15 Países Visitados</h4>
+                            <p>Missões humanitárias em diferentes continentes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="projetos-andamento">
+                    <h3>Projetos em Andamento</h3>
+                    <div class="projetos-grid">
+                        <div class="projeto-item">
+                            <h4>Missão África 2024</h4>
+                            <p>Levar alimentos, roupas e esperança para comunidades carentes da África</p>
+                            <div class="projeto-status">
+                                <span class="status-badge">Em Andamento</span>
+                            </div>
+                        </div>
+                        <div class="projeto-item">
+                            <h4>Capacitação Digital</h4>
+                            <p>Programa de inclusão digital para jovens em situação de vulnerabilidade</p>
+                            <div class="projeto-status">
+                                <span class="status-badge">Em Andamento</span>
+                            </div>
+                        </div>
+                        <div class="projeto-item">
+                            <h4>Centro Comunitário</h4>
+                            <p>Construção de um centro para atividades educativas e sociais</p>
+                            <div class="projeto-status">
+                                <span class="status-badge">Planejado</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galeria -->
+    <section id="galeria" class="galeria">
+        <div class="container">
+            <h2 class="section-title">Galeria de Fotos e Vídeos</h2>
+            <div class="galeria-content">
+                <div class="galeria-grid">
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Foto da Missão África</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Distribuição de Alimentos</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Capacitação Profissional</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Eventos Comunitários</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder">
+                            <i class="fas fa-video"></i>
+                            <p>Vídeo Institucional</p>
+                        </div>
+                    </div>
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Nossos Voluntários</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parceiros -->
+    <section id="parceiros" class="parceiros">
+        <div class="container">
+            <h2 class="section-title">Empresas e Instituições Parceiras</h2>
+            <div class="parceiros-content">
+                <div class="parceiro-item">
+                    <div class="parceiro-logo">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h4>Instituto ABC</h4>
+                    <p>Associação Brasileira de Benefícios à Comunidade</p>
+                </div>
+                <div class="parceiro-item">
+                    <div class="parceiro-logo">
+                        <i class="fas fa-hands-helping"></i>
+                    </div>
+                    <h4>ONG Solidariedade</h4>
+                    <p>Organização não governamental de apoio humanitário</p>
+                </div>
+                <div class="parceiro-item">
+                    <div class="parceiro-logo">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h4>Fundos de Caridade</h4>
+                    <p>Instituições financeiras com foco em causas sociais</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contato e Informações -->
+    <section id="contato" class="contato">
+        <div class="container">
+            <h2 class="section-title">Contato e Informações</h2>
+            <div class="contato-content">
+                <div class="contato-info">
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Endereço da Sede</h4>
+                            <p>Rua das Flores, 123 - Centro<br>São Paulo - SP, 01234-567</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>Telefone</h4>
+                            <p>+55 (11) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-text">
+                            <h4>E-mail</h4>
+                            <p>contato@umeccontinente.org</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="redes-sociais">
+                    <h4>Redes Sociais</h4>
+                    <div class="social-links">
+                        <a href="https://instagram.com/umec" class="social-link" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <span>@umec</span>
+                        </a>
+                        <a href="https://facebook.com/umec" class="social-link" target="_blank">
+                            <i class="fab fa-facebook"></i>
+                            <span>UMEC</span>
+                        </a>
+                        <a href="https://youtube.com/umec" class="social-link" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                            <span>UMEC Oficial</span>
+                        </a>
+                        <a href="https://linkedin.com/company/umec" class="social-link" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>UMEC</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slogan -->
+    <section class="slogan">
+        <div class="container">
+            <div class="slogan-content">
+                <h2>"Transformando Vidas, Construindo Futuros"</h2>
+                <p>Uma frase que carregamos como motivação e inspiração para continuar nossa missão de fazer o bem e promover o desenvolvimento humano em todos os continentes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="U.M.E.C. Logo" class="footer-logo-img">
+                    <p>União Mundial de Ministros do Bem e Empreendedores dos Continentes</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#quem-somos">Quem Somos</a></li>
+                        <li><a href="#como-apoiar">Como Apoiar</a></li>
+                        <li><a href="#nosso-impacto">Nosso Impacto</a></li>
+                        <li><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contato</h4>
+                    <p>contato@umeccontinente.org</p>
+                    <p>+55 (11) 99999-9999</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 U.M.E.C. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

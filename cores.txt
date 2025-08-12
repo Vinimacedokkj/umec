@@ -1,0 +1,67 @@
+# Cor Principal (destaques, botões, elementos chave)
+A28B42
+
+# Cor de Fundo (header, rodapé, seções)
+F3F1EB
+
+# Cor Secundária (hover, links, detalhes)
+6D5E2E
+
+# Cor para Título
+2E2C26
+
+# Cor para Subtítulo
+4B4739
+
+# Cor para Texto Base (parágrafos)
+5A564C
+
+# Cor Clara (botões com texto claro, fundo branco)
+FFFFFF
+
+CSS
+:root {
+  --cor-principal: #A28B42;
+  --fundo-pagina: #F3F1EB;
+  --cor-secundaria: #6D5E2E;
+  --cor-titulo: #2E2C26;
+  --cor-subtitulo: #4B4739;
+  --cor-texto: #5A564C;
+  --cor-clara: #FFFFFF;
+}
+
+🔤 FONTES RECOMENDADAS
+
+1. **Fonte Principal (Títulos e Hero Sections)**
+   🅰️ *Playfair Display*  
+   - Estilo: Elegante, editorial, clássico
+   - Uso: Títulos, chamadas principais
+   - Link Google Fonts: https://fonts.google.com/specimen/Playfair+Display
+
+2. **Fonte Secundária (Textos e Parágrafos)**
+   🅰️ *Lato*  
+   - Estilo: Moderna, altamente legível
+   - Uso: Parágrafos, navegação, botões
+   - Link: https://fonts.google.com/specimen/Lato
+
+3. **Fonte Alternativa (Citações, frases de impacto, nomes próprios)**
+   🅰️ *Raleway*  
+   - Estilo: Leve, estilosa, espaçada
+   - Uso: Destaques, subtítulos, depoimentos
+   - Link: https://fonts.google.com/specimen/Raleway
+
+4. **Fonte de apoio (menus, botões pequenos, rodapé)**
+   🅰️ *Inter*  
+   - Estilo: Neutra, moderna, técnica
+   - Uso: UI geral, interfaces menores
+   - Link: https://fonts.google.com/specimen/Inter
+
+| Elemento                  | Tamanho em `px` | Tamanho em `rem` | Uso sugerido                       |
+| ------------------------- | --------------- | ---------------- | ---------------------------------- |
+| `h1` (Título principal)   | 40px            | 2.5rem           | Hero section, cabeçalho grande     |
+| `h2` (Subtítulo)          | 32px            | 2rem             | Seções principais                  |
+| `h3`                      | 24px            | 1.5rem           | Seções internas, blocos            |
+| `h4`                      | 20px            | 1.25rem          | Destaques menores                  |
+| Texto normal (`p`)        | 16px            | 1rem             | Corpo do texto                     |
+| Pequeno (`small`, rodapé) | 14px            | 0.875rem         | Textos menores, rodapés, copyright |
+| Mini (`.tiny`, etc.)      | 12px            | 0.75rem          | Labels pequenos, observações       |
