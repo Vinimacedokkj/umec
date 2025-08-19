@@ -123,7 +123,7 @@
 
     /* ===== HERO SECTION ===== */
     .hero {
-        background: linear-gradient(135deg, #87CEEB 0%, #B0E0E6 100%);
+        background: linear-gradient(135deg, rgba(204, 187, 131, 0.5) 0%, rgba(201, 178, 103, 0.5) 100%);
         min-height: 100vh;
         display: flex;
         align-items: center;
@@ -147,7 +147,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600"><path d="M100,100 Q200,50 300,100 T500,100 Q600,150 700,100 T900,100 L900,500 Q800,450 700,500 T500,500 Q400,450 300,500 T100,500 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+        background-image: url('/img/mundo.jpg');
+        background-attachment: fixed;
         background-size: cover;
         opacity: 0.3;
     }
