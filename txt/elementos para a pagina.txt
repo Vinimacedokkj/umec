@@ -18,3 +18,5 @@ E qual a chave pix para colocar como forma de doação e um endereço do local p
 - Slogan principal (opcional) - Uma frase que queira levar para frente como motivação ou impacto.
 
 página: https://umeccontinente.org/
+
+nova página: umecglobal.org

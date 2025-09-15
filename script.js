@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== FUNCIONALIDADE DE COPIAR PIX =====
     window.copyPix = function() {
-        const pixKey = 'contato@umeccontinente.org';
+        const pixKey = 'institutoabcproafrica@gmail.com';
         
         if (navigator.clipboard) {
             navigator.clipboard.writeText(pixKey).then(function() {
@@ -229,6 +229,16 @@ document.addEventListener('DOMContentLoaded', function() {
             imageObserver.observe(img);
         });
     }
+
+    // ========= GALERIA =========
+    function toggleCarousel() {
+        let mocambiqueContainer = document.getElementById("mocambique");
+        let carouselContainer = document.getElementById("carousel");
+
+        
+
+    }
+
     
     // ===== SCROLL TO TOP BUTTON =====
     const scrollTopBtn = document.createElement('button');

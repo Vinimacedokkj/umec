@@ -236,7 +236,7 @@
                     <p>Contribua com qualquer valor para apoiar nossos projetos sociais e humanitários.</p>
                     <div class="pix-info">
                         <h4>Chave PIX:</h4>
-                        <p class="pix-key">chavepix@umec.org</p>
+                        <p class="pix-key">institutoabcproafrica@gmail.com
                         <button class="btn-copy" onclick="copyPix()">
                             <i class="fas fa-copy"></i> Copiar
                         </button>
@@ -336,9 +336,9 @@
             <div class="galeria-content">
                 <div class="galeria-grid">
                     <div class="galeria-item">
-                        <div class="galeria-placeholder">
+                        <div class="galeria-placeholder" id="mocambique">
                             <i class="fas fa-image"></i>
-                            <p>Foto da Missão África</p>
+                            <p>Missão Moçambique</p>   
                         </div>
                     </div>
                     <div class="galeria-item">
@@ -370,6 +370,43 @@
                             <i class="fas fa-image"></i>
                             <p>Nossos Voluntários</p>
                         </div>
+                    </div>
+                </div>
+
+                <div class="carousel" id="carousel">
+                    <div>
+                        <div class="mySlides">
+                            <div class="number-text">1 / 4</div>
+                            <img src="/ações/moçambique/fotos/foto (1).jpg">
+                            <div class="text">Caption text</div>
+                        </div>
+                        
+                        <div class="mySlides">
+                            <div class="number-text">2 / 4</div>
+                            <img src="/ações/moçambique/fotos/foto (2).jpg">
+                            <div class="text">Caption text</div>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="number-text">3 / 4</div>
+                            <img src="/ações/moçambique/fotos/foto (3).jpg">
+                            <div class="text">Caption text</div>
+                        </div>
+
+                        <div class="mySlides">
+                            <div class="number-text">4 / 4</div>
+                            <img src="/ações/moçambique/fotos/foto (4).jpg">
+                            <div class="text">Caption text</div>
+                        </div>
+
+                        <a href="" onclick="pushSlide(-1)" class="prev">&#10094;</a>
+                        <a href="" onclick="pushSlide(1)" class="next">&#10095;</a>
+                    </div>
+
+                    <div style="text-align: center;">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
             </div>
@@ -466,11 +503,28 @@
     </section>
 
     <!-- Slogan -->
-    <section class="slogan">
+    <!-- <section class="slogan">
         <div class="container">
             <div class="slogan-content">
                 <h2>"Transformando Vidas, Construindo Futuros"</h2>
                 <p>Uma frase que carregamos como motivação e inspiração para continuar nossa missão de fazer o bem e promover o desenvolvimento humano em todos os continentes.</p>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- CTA -->
+    <section class="cta-quem-somos">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Faça Parte da Nossa História</h2>
+                <p>
+                    Junte-se à U.M.E.C. e ajude-nos a transformar vidas ao redor do mundo. 
+                    Sua contribuição, seja através de doações, voluntariado ou parcerias, faz toda a diferença.
+                </p>
+                <div class="cta-buttons">
+                    <a href="index.html#como-apoiar" class="btn-primary">Como Apoiar</a>
+                    <a href="index.html#contato" class="btn-secondary">Entre em Contato</a>
+                </div>
             </div>
         </div>
     </section>
