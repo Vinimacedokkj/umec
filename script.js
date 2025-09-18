@@ -231,14 +231,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // ========= GALERIA =========
-    function toggleCarousel() {
-        let mocambiqueContainer = document.getElementById("mocambique");
-        let carouselContainer = document.getElementById("carousel");
-
         
 
-    }
-
+    
     
     // ===== SCROLL TO TOP BUTTON =====
     const scrollTopBtn = document.createElement('button');
@@ -333,3 +328,62 @@ document.addEventListener('DOMContentLoaded', function() {
     
     console.log('Site UMEC carregado com sucesso! 🚀');
 });
+
+// Pega todos os elementos com a classe "open-modal"
+const openers = document.querySelectorAll(".open-modal");
+
+openers.forEach((element) => {
+    element.addEventListener("click", function () {
+    const id = element.id;
+
+    // Aqui você pode mostrar o modal específico de acordo com o ID
+    // Exemplo básico:
+    document.getElementById("modal").classList.remove("hidden");
+
+    // Se quiser trocar as imagens dinamicamente, você pode fazer aqui também:
+    const modalImages = document.querySelector(".modal-images");
+    modalImages.innerHTML = ""; // Limpa imagens anteriores
+
+    // Simulação: carrega imagens com base no ID
+    const images = getImagesForSection(id);
+    images.forEach((src) => {
+        const img = document.createElement("img");
+        img.src = src;
+        modalImages.appendChild(img);
+    });
+    });
+});
+
+// Botão para fechar o modal
+document.querySelector(".close-btn").addEventListener("click", function () {
+    document.getElementById("modal").classList.add("hidden");
+});
+
+// Fecha se clicar fora do conteúdo
+document.getElementById("modal").addEventListener("click", function (e) {
+    if (e.target.id === "modal") {
+    document.getElementById("modal").classList.add("hidden");
+    }
+});
+
+// Função que retorna imagens conforme o ID
+function getImagesForSection(id) {
+    const imagens = {
+    mocambique: [
+        "/ações/moçambique/fotos/foto (1).jpg",
+        "/ações/moçambique/fotos/foto (2).jpg",
+        "/ações/moçambique/fotos/foto (3).jpg"
+    ],
+    ['irmaos-continente-africano']: [
+        "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/cover.jpg",
+        "/ações/alimentos/food2.jpg"
+    ],
+    capacitacao: [
+        "/ações/capacitacao/cap1.jpg",
+        "/ações/capacitacao/cap2.jpg"
+    ]
+    // adicione mais conforme precisar
+    };
+
+    return imagens[id] || [];
+}

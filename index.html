@@ -336,82 +336,63 @@
             <div class="galeria-content">
                 <div class="galeria-grid">
                     <div class="galeria-item">
-                        <div class="galeria-placeholder" id="mocambique">
+                        <div class="galeria-placeholder open-modal" id="mocambique">
                             <i class="fas fa-image"></i>
-                            <p>Missão Moçambique</p>   
+                            <p>Missão Moçambique</p>
                         </div>
                     </div>
                     <div class="galeria-item">
-                        <div class="galeria-placeholder">
+                        <div class="galeria-placeholder open-modal" id="irmaos-continente-africano">
                             <i class="fas fa-image"></i>
-                            <p>Distribuição de Alimentos</p>
+                            <p>Ajudando os irmãos no continente africano</p>
                         </div>
                     </div>
                     <div class="galeria-item">
-                        <div class="galeria-placeholder">
+                        <div class="galeria-placeholder open-modal" id="assembleia-legislativa">
                             <i class="fas fa-image"></i>
-                            <p>Capacitação Profissional</p>
+                            <p>Assembléia Legislativa</p>
                         </div>
                     </div>
                     <div class="galeria-item">
-                        <div class="galeria-placeholder">
+                        <div class="galeria-placeholder open-modal" id="encontro-conlatam">
                             <i class="fas fa-image"></i>
-                            <p>Eventos Comunitários</p>
+                            <p>Encontro CONLATAM</p>
                         </div>
                     </div>
                     <div class="galeria-item">
-                        <div class="galeria-placeholder">
+                        <div class="galeria-placeholder open-modal" id="reuniao-fernando">
                             <i class="fas fa-video"></i>
-                            <p>Vídeo Institucional</p>
+                            <p>Reunião com Fernando Manholer</p>
                         </div>
                     </div>
                     <div class="galeria-item">
-                        <div class="galeria-placeholder">
+                        <div class="galeria-placeholder open-modal" id="reuniao-representantes">
                             <i class="fas fa-image"></i>
-                            <p>Nossos Voluntários</p>
+                            <p>Reunião com representantes de 06 Estados Brasileiros</p>
                         </div>
                     </div>
-                </div>
-
-                <div class="carousel" id="carousel">
-                    <div>
-                        <div class="mySlides">
-                            <div class="number-text">1 / 4</div>
-                            <img src="/ações/moçambique/fotos/foto (1).jpg">
-                            <div class="text">Caption text</div>
+                    <div class="galeria-item">
+                        <div class="galeria-placeholder open-modal" id="reuniao-ministros">
+                            <i class="fas fa-image"></i>
+                            <p>Reunião com ministros de cada país</p>
                         </div>
-                        
-                        <div class="mySlides">
-                            <div class="number-text">2 / 4</div>
-                            <img src="/ações/moçambique/fotos/foto (2).jpg">
-                            <div class="text">Caption text</div>
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="number-text">3 / 4</div>
-                            <img src="/ações/moçambique/fotos/foto (3).jpg">
-                            <div class="text">Caption text</div>
-                        </div>
-
-                        <div class="mySlides">
-                            <div class="number-text">4 / 4</div>
-                            <img src="/ações/moçambique/fotos/foto (4).jpg">
-                            <div class="text">Caption text</div>
-                        </div>
-
-                        <a href="" onclick="pushSlide(-1)" class="prev">&#10094;</a>
-                        <a href="" onclick="pushSlide(1)" class="next">&#10095;</a>
-                    </div>
-
-                    <div style="text-align: center;">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Modal de Imagens -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-images">
+            <img src="/ações/moçambique/fotos/foto (1).jpg" alt="Imagem 1">
+            <img src="/ações/moçambique/fotos/foto (2).jpg" alt="Imagem 2">
+            <img src="/ações/moçambique/fotos/foto (3).jpg" alt="Imagem 3">
+            </div>
+        </div>
+    </div>
 
     <!-- Parceiros -->
     <section id="parceiros" class="parceiros">
