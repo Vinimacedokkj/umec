@@ -76,29 +76,29 @@ document.addEventListener('DOMContentLoaded', function() {
     });
     
     // ===== ANIMAÇÃO DE ELEMENTOS NO SCROLL =====
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
+    // const observerOptions = {
+    //     threshold: 0.1,
+    //     rootMargin: '0px 0px -50px 0px'
+    // };
     
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, observerOptions);
+    // const observer = new IntersectionObserver(function(entries) {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.style.opacity = '1';
+    //             entry.target.style.transform = 'translateY(0)';
+    //         }
+    //     });
+    // }, observerOptions);
     
     // Observar elementos para animação
-    const animateElements = document.querySelectorAll('.apoio-card, .impacto-item, .projeto-item, .galeria-item, .parceiro-item');
+    // const animateElements = document.querySelectorAll('.apoio-card, .impacto-item, .projeto-item, .galeria-item, .parceiro-item');
     
-    animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(el);
-    });
+    // animateElements.forEach(el => {
+    //     el.style.opacity = '0';
+    //     el.style.transform = 'translateY(30px)';
+    //     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    //     observer.observe(el);
+    // });
     
     // ===== FUNCIONALIDADE DE COPIAR PIX =====
     window.copyPix = function() {
@@ -207,32 +207,6 @@ document.addEventListener('DOMContentLoaded', function() {
         impactoObserver.observe(impactoSection);
     }
     
-    // ===== LAZY LOADING PARA IMAGENS =====
-    const images = document.querySelectorAll('img[src]');
-    
-    if ('IntersectionObserver' in window) {
-        const imageObserver = new IntersectionObserver(function(entries) {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const img = entry.target;
-                    img.style.opacity = '1';
-                    img.style.transform = 'scale(1)';
-                    imageObserver.unobserve(img);
-                }
-            });
-        });
-        
-        images.forEach(img => {
-            img.style.opacity = '0';
-            img.style.transform = 'scale(0.95)';
-            img.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-            imageObserver.observe(img);
-        });
-    }
-
-    // ========= GALERIA DE FOTOS E VÍDEOS =========
-
-
     // ===== SCROLL TO TOP BUTTON =====
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
