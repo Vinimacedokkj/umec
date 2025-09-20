@@ -414,11 +414,13 @@
     /* ===== GALERIA ===== */
     .galeria {
         /* border: 4px solid blue; */
+        overflow: hidden;
         padding: 5rem 0;
         background-color: var(--fundo-pagina);
         display: flex;
         flex-direction: column;
         align-items: center;
+        flex-wrap: wrap;
     }
 
     .galeria-item {
