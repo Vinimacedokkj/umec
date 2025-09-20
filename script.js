@@ -230,10 +230,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // ========= GALERIA =========
-        
+    // ========= GALERIA DE FOTOS E VÍDEOS =========
 
-    
     
     // ===== SCROLL TO TOP BUTTON =====
     const scrollTopBtn = document.createElement('button');
@@ -466,6 +464,7 @@ function getImagesForSection(id) {
         "/ações/moçambique/fotos/foto (94).jpg",
         "/ações/moçambique/fotos/foto (95).jpg"
     ],
+
     ['irmaos-continente-africano']: [
         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (1).jpg",
         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (2).jpg",
@@ -507,11 +506,63 @@ function getImagesForSection(id) {
         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (39).jpg",
         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (40).jpg"
     ],
-    capacitacao: [
-        "/ações/capacitacao/cap1.jpg",
-        "/ações/capacitacao/cap2.jpg"
+
+    ['assembleia-legislativa']: [
+        "/ações/assembleia\ legislativa/fotos/foto (1).jpg",
+        "/ações/assembleia\ legislativa/fotos/foto (2).jpg",
+        "/ações/assembleia\ legislativa/fotos/foto (3).jpg"
+    ],
+
+    ['encontro-conlatam']: [
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (1).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (2).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (3).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (4).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (5).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (6).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (7).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (8).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (9).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (10).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (11).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (12).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (13).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (14).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (15).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (16).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (17).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (18).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (19).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (20).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (21).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (22).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (23).jpg",
+        "/ações/encontro\ da\ CONLATAM/fotos/foto (24).jpg"
+    ],
+    
+    ['reuniao-fernando']: [
+        "/ações/reunião\ com\ Fernando\ Manholer/fotos/foto (1).jpg",
+        "/ações/reunião\ com\ Fernando\ Manholer/fotos/foto (2).jpg",
+        "/ações/reunião\ com\ Fernando\ Manholer/fotos/foto (3).jpg"
+    ],
+
+    ['reuniao-representantes']: [
+        "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (1).jpg",
+        "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (2).jpg",
+        "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (3).jpg",
+        "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (4).jpg",
+        "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (5).jpg",
+        "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (6).jpg"
+    ],
+
+    ['reuniao-ministros']: [
+        "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (1).jpg",
+        "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (2).jpg",
+        "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (3).jpg",
+        "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (4).jpg",
+        "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (5).jpg",
+        "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (6).jpg"
     ]
-    // adicione mais conforme precisar
     };
 
     return imagens[id] || [];
