@@ -425,7 +425,9 @@
 
     .galeria-item {
         /* border: 3px solid yellow; */
-        width: 1300px;
+        max-width: 1300px;
+        width: 100%;
+        padding: 0 1rem;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -455,13 +457,16 @@
         justify-content: start;
     }
 
+
+
     .galeria-item #galeria-botao {
         /* border: 3px solid salmon; */
     }
 
     .galeria-grid {
+        /* border: 5px solid green; */
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 15px;
         margin-top: 2rem;
         width: 100%;
@@ -469,7 +474,7 @@
 
     .galeria-grid img {
         width: 100%;
-        height: 400px;
+        height: 250px;
         object-fit: cover;
         border-radius: 8px;
         display: block;
@@ -499,6 +504,23 @@
 
     #ver-mais-btn:hover {
         background-color: var(--cor-secundaria);
+    }
+
+    @media (max-width: 600px) {
+        .galeria-grid {
+            grid-template-columns: 1fr;
+        }
+        .galeria-item > h2 {
+            font-size: 22px;
+        }
+
+        .galeria-item > p {
+            font-size: 15px;
+        }
+
+        .galeria-grid img {
+            height: 200px;
+        }
     }
 
     /* ===== GALERIA DE VÍDEOS ===== */
@@ -644,6 +666,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        flex-wrap: wrap;
         gap: 1rem;
     }
 
@@ -812,6 +835,25 @@
     
     .nav {
         display: none;
+    }
+
+    .footer-logo {
+        /* border: 3px solid salmon; */
+        display: flex;
+        flex-flow: column wrap;
+        align-content: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer-logo img {
+        /* border: 3px solid blue; */
+        width: 40%;
+        height: auto;
+    }
+
+    .footer-logo p {
+        /* border: 4px solid yellowgreen; */
     }
     
     .nav.active {
