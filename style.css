@@ -201,6 +201,62 @@
         box-shadow: 0 5px 15px rgba(162, 139, 66, 0.3);
     }
 
+    .evento-encontro {
+        /* border: 3px solid red; */
+        font-size: 1.2rem;
+        font-family: var(--fonte-texto);
+    }
+
+    .evento-encontro h2 {
+        text-align: center;
+        padding: 40px 0;
+    }
+
+    .evento-encontro .container {
+        padding: 0;
+        /* border: 2px solid blue; */
+        height: auto;
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+    }
+
+    .evento-encontro .container .img {
+        /* border: 4px solid red; */
+        grid-area: 1 / 1 / span 5 / span 3;
+        background-image: url(/assets/img/evento\ encontro\ empresarial\ brasil\ africa.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    .evento-encontro .container .video {
+        /* border: 3px solid blue; */
+        grid-area: 4 / 5 / span 4 / span 3;
+        /* display: flex;
+        justify-content: center;
+        align-items: center; */
+    }
+
+    .evento-encontro .container .video video {
+        /* border: 3px solid yellow; */
+        width: 100%;
+        height: auto;
+    }
+    
+    .evento-encontro .container .text {
+        padding: 30px;
+    }
+
+    .evento-encontro .container .text1 {
+        grid-area: 1 / 4 / span 4 / span 4;
+    }
+
+    .evento-encontro .container .text2 {
+        grid-area: 4 / 1 / span 4 / span 4;
+    }
+
+
+
     /* ===== QUEM SOMOS ===== */
     .quem-somos {
         padding: 5rem 0;
