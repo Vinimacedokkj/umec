@@ -147,7 +147,7 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url('/img/mundo.jpg');
+        background-image: url('assets/img/mundo.jpg');
         background-attachment: fixed;
         background-size: cover;
         opacity: 0.3;
