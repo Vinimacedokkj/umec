@@ -217,7 +217,25 @@
     .evento-encontro h2 {
         /* border: 3px solid brown; */
         text-align: center;
-        padding: 40px 0;
+        padding: 40px 80px;
+        font-size: 1.9rem;
+        font-family: var(--fonte-texto);
+    }
+
+    .evento-encontro .logo-primeiro-encontro {
+        /* border: 3px solid blue; */
+        width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 5rem;
+    }
+
+    .evento-encontro .logo-primeiro-encontro img {
+        /* border: 3px solid red; */
+        width: 50%;
+        height: auto;
     }
 
     .evento-encontro .container {
@@ -285,22 +303,25 @@
         justify-content: center;
         height: 100%;
         width: 70%;
-        transition: transform 1s ease;
+        /* transition: transform 1s ease; */
         padding: 10px 0;
     }
 
-    .apoiadores .flex-container:hover {
-        transform: scale(1.06);
-        box-shadow: 0 0 0.5em 0em #979695;
-        border-color: #979695;
-        color: #979695;
+    .apoiadores h3 {
+        font-family: var(--fonte-texto);
     }
 
     .apoiadores .flex-container img {
-        
+        margin-bottom: 40px;
+        border-radius: 20px;
+        box-shadow: 5px 5px 30px 0.1px black;
     }
 
 @media (max-width: 1040px) {
+    .evento-encontro .logo-primeiro-encontro img {
+        width: 70%;
+    }
+    
     .evento-encontro .container {
         /* border: 2px solid blue; */
         padding: 0;
@@ -330,7 +351,7 @@
     .evento-encontro .container .text2 {
     }
 
-        .evento-encontro .container .video {
+    .evento-encontro .container .video {
         /* border: 3px solid blue; */
         height: auto;
         display: flex;
@@ -351,16 +372,22 @@
     .apoiadores .flex-container {
         /* border: 4px solid blue; */
         width: 100%;
+        padding: 0 10px;
     }
 
     .apoiadores .flex-container img {
         width: 70%;
-    }   
+    }
 }
 
 @media (max-width: 600px) {
+    .evento-encontro .logo-primeiro-encontro img {
+        width: 90%;
+    }
+    
     .evento-encontro h2 {
         font-size: 1.6rem;
+        padding: 40px 20px;
     }
 
     .evento-encontro #atencao {
