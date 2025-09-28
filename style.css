@@ -355,6 +355,7 @@
         /* border: 3px solid blue; */
         height: auto;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
     }
@@ -765,10 +766,14 @@
 
     /* Esse CSS é relacionado ao vídeo que tem logo no início da página, na sessão sobre nós */
 
-    /* Título "JAMAIS FECHAREMOS..." */
+    /* Título do vídeo na página */
     h2.section-title#titulo-video-ciclone {
         /* color: var(--cor-principal); */
         font-weight: 900;
+    }
+
+    p.section-title {
+        font-size: 1.5rem;
     }
     
     /* Texto sobre ciclone */
