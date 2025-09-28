@@ -201,13 +201,21 @@
         box-shadow: 0 5px 15px rgba(162, 139, 66, 0.3);
     }
 
+    /* ======= EVENTO 1º ENCONTRO EMPRESARIAL ÁFRICA ======= */
     .evento-encontro {
         /* border: 3px solid red; */
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-family: var(--fonte-texto);
     }
 
+    .evento-encontro #atencao {
+        /* border: 3px solid green; */
+        background-color: var(--cor-principal);
+        font-weight: 900;
+    }
+
     .evento-encontro h2 {
+        /* border: 3px solid brown; */
         text-align: center;
         padding: 40px 0;
     }
@@ -255,6 +263,115 @@
         grid-area: 5 / 1 / span 4 / span 4;
     }
 
+    .apoiadores {
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        /* border: 4px solid yellow; */
+        height: auto;
+        margin: 80px 0;
+        padding: 20px 0;
+    }
+
+    .apoiadores .flex-container {
+        /* border: 4px solid red; */
+        /* background: linear-gradient(0deg, var(--fundo-pagina), #3c341a); */
+        border-color: #979695;
+        color: #979695;
+        border-radius: 30px;
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        width: 70%;
+        transition: transform 1s ease;
+        padding: 10px 0;
+    }
+
+    .apoiadores .flex-container:hover {
+        transform: scale(1.06);
+        box-shadow: 0 0 0.5em 0em #979695;
+        border-color: #979695;
+        color: #979695;
+    }
+
+    .apoiadores .flex-container img {
+        
+    }
+
+@media (max-width: 1040px) {
+    .evento-encontro .container {
+        /* border: 2px solid blue; */
+        padding: 0;
+        height: auto;
+        display: flex;
+        flex-flow: column wrap;
+        width: 100%;
+    }   
+
+    .evento-encontro .container .img {
+        /* border: 4px solid red; */
+        height: 100vh;
+        width: auto;
+        background-image: url(/assets/img/flyer\ encontro.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+        
+    .evento-encontro .container .text {
+        padding: 30px;
+    }
+
+    .evento-encontro .container .text1 {
+    }
+
+    .evento-encontro .container .text2 {
+    }
+
+        .evento-encontro .container .video {
+        /* border: 3px solid blue; */
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .evento-encontro .container .video video {
+        /* border: 3px solid yellow; */
+        width: 80%;
+        height: 100vh;
+    }
+
+    .apoiadores {
+        /* border: 4px solid brown; */
+    }
+
+    .apoiadores .flex-container {
+        /* border: 4px solid blue; */
+        width: 100%;
+    }
+
+    .apoiadores .flex-container img {
+        width: 70%;
+    }   
+}
+
+@media (max-width: 600px) {
+    .evento-encontro h2 {
+        font-size: 1.6rem;
+    }
+
+    .evento-encontro #atencao {
+        font-size: 1.4rem;
+    }
+
+    .apoiadores .flex-container img {
+        width: 100%;
+        padding: 0 10px;
+    }
+}
 
 
     /* ===== QUEM SOMOS ===== */
