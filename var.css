@@ -1,15 +1,1 @@
-/* ===== VARIÁVEIS CSS ===== */
-:root {
-    --cor-principal: #A28B42;
-    --fundo-pagina: #F3F1EB;
-    --cor-secundaria: #6D5E2E;
-    --cor-titulo: #2E2C26;
-    --cor-subtitulo: #4B4739;
-    --cor-texto: #5A564C;
-    --cor-clara: #FFFFFF;
-
-    --fonte-titulo: 'Playfair Display', serif;
-    --fonte-texto: 'Lato', sans-serif;
-    --fonte-destaque: 'Raleway', sans-serif;
-    --fonte-interface: 'Inter', sans-serif;
-}
+:root{--cor-principal:#A28B42;--fundo-pagina:#F3F1EB;--cor-secundaria:#6D5E2E;--cor-titulo:#2E2C26;--cor-subtitulo:#4B4739;--cor-texto:#5A564C;--cor-clara:#FFFFFF;--fonte-titulo:'Playfair Display',serif;--fonte-texto:'Lato',sans-serif;--fonte-destaque:'Raleway',sans-serif;--fonte-interface:'Inter',sans-serif}
