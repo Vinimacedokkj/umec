@@ -151,6 +151,7 @@
         background-attachment: fixed;
         background-size: cover;
         opacity: 0.3;
+        overflow: hidden;
     }
 
     .hero-content {
@@ -203,19 +204,17 @@
 
     /* ======= EVENTO 1º ENCONTRO EMPRESARIAL ÁFRICA ======= */
     .evento-encontro {
-        /* border: 3px solid red; */
+        /* border: 6px solid brown; */
         font-size: 1.3rem;
         font-family: var(--fonte-texto);
     }
 
     .evento-encontro #atencao {
-        /* border: 3px solid green; */
         background-color: var(--cor-principal);
         font-weight: 900;
     }
 
     .evento-encontro h2 {
-        /* border: 3px solid brown; */
         text-align: center;
         padding: 40px 80px;
         font-size: 1.9rem;
@@ -223,7 +222,6 @@
     }
 
     .evento-encontro .logo-primeiro-encontro {
-        /* border: 3px solid blue; */
         width: 100%;
         overflow: hidden;
         display: flex;
@@ -233,69 +231,83 @@
     }
 
     .evento-encontro .logo-primeiro-encontro img {
-        /* border: 3px solid red; */
         width: 50%;
         height: auto;
+        border-radius: 100%;
+        box-shadow: 2px 2px 20px 0.1px #0000004a;
+        margin: 30px 0;
     }
 
     .evento-encontro .container {
         padding: 0;
-        /* border: 2px solid blue; */
         height: auto;
-        display: grid;
-        grid-template-columns: repeat(7, 1fr);
-        grid-template-rows: repeat(7, 1fr);
+        display: flex;
+        flex-wrap: wrap;
     }
 
-    .evento-encontro .container .img {
-        /* border: 4px solid red; */
-        grid-area: 1 / 1 / span 5 / span 3;
-        background-image: url(/assets/img/flyer\ encontro.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .evento-encontro .container .video {
-        /* border: 3px solid blue; */
-        grid-area: 4 / 5 / span 4 / span 3;
-        /* display: flex;
-        justify-content: center;
-        align-items: center; */
-    }
-
-    .evento-encontro .container .video video {
-        /* border: 3px solid yellow; */
-        width: 100%;
-        height: auto;
-    }
-    
-    .evento-encontro .container .text {
+    .evento-encontro .text {
         padding: 30px;
     }
 
-    .evento-encontro .container .text1 {
-        grid-area: 1 / 4 / span 4 / span 4;
+    .evento-encontro .bloco1 {
+        display: flex;
     }
 
-    .evento-encontro .container .text2 {
-        grid-area: 5 / 1 / span 4 / span 4;
+    .evento-encontro .img {
+        width: 50%;
+        height: auto;
     }
 
-    .apoiadores {
+    .evento-encontro .img img {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .evento-encontro .text1 {
+        display: flex;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .evento-encontro .bloco2 {
+        display: flex;
+    }
+
+    .evento-encontro .text2 {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .evento-encontro .video {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+
+    .evento-encontro .video video {
+        width: auto;
+        height: 700px;
+        border-radius: 15px;
+    }
+
+    .evento-encontro .apoiadores {
         overflow: hidden;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        /* border: 4px solid yellow; */
         height: auto;
         margin: 80px 0;
         padding: 20px 0;
     }
 
-    .apoiadores .flex-container {
-        /* border: 4px solid red; */
-        /* background: linear-gradient(0deg, var(--fundo-pagina), #3c341a); */
+    .evento-encontro .apoiadores .flex-container {
         border-color: #979695;
         color: #979695;
         border-radius: 30px;
@@ -307,32 +319,97 @@
         padding: 10px 0;
     }
 
-    .apoiadores h3 {
-        font-family: var(--fonte-texto);
+    .evento-encontro .apoiadores h3 {
+        font-family: var(--fonte-destaque);
     }
 
-    .apoiadores .flex-container img {
+    .evento-encontro .apoiadores .flex-container img {
         margin-bottom: 40px;
         border-radius: 20px;
         box-shadow: 2px 2px 20px 0.1px #0000004a;
     }
 
-@media (max-width: 1040px) {
+@media (max-width: 1000px) {
+    .evento-encontro .container {
+        /* border: 6px solid green; */
+        display: flex;
+        flex-flow: column nowrap;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .evento-encontro .bloco1 {
+        /* border: 6px solid brown; */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .evento-encontro .img {
+        /* border: 6px solid yellow; */
+        width: 100%;
+    }
+
+    /* .evento-encontro .img img {
+        border: 6px solid hotpink;
+    } */
+
+    .evento-encontro .text1 {
+        /* border: 6px solid black; */
+        width: 100%;
+    }
+
+    .evento-encontro .bloco2 {
+        /* border: 6px solid blue; */
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .evento-encontro .text2 {
+        /* border: 6px solid salmon; */
+        width: 100%;
+    }
+
+    .evento-encontro .video {
+        /* border: 6px solid lightgreen; */
+        width: 100%;
+    }
+
+    .evento-encontro .video video {
+        /* border: 6px solid gold; */
+        width: auto;
+        height: 900px;
+    }
+
+    .evento-encontro .apoiadores {
+        /* border: 6px solid salmon; */
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* .evento-encontro .apoiadores .flex-container {
+        border: 6px solid yellowgreen;
+        width: 100%;
+    }
+
+
     .evento-encontro .logo-primeiro-encontro img {
         width: 70%;
     }
     
     .evento-encontro .container {
-        /* border: 2px solid blue; */
+        border: 2px solid blue;
         padding: 0;
         height: auto;
         display: flex;
         flex-flow: column wrap;
         width: 100%;
-    }   
+    } 
 
     .evento-encontro .container .img {
-        /* border: 4px solid red; */
+        border: 4px solid red;
         height: 100vh;
         width: auto;
         background-image: url(/assets/img/flyer\ encontro.jpg);
@@ -345,14 +422,8 @@
         padding: 30px;
     }
 
-    .evento-encontro .container .text1 {
-    }
-
-    .evento-encontro .container .text2 {
-    }
-
     .evento-encontro .container .video {
-        /* border: 3px solid blue; */
+        border: 3px solid blue;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -361,25 +432,26 @@
     }
 
     .evento-encontro .container .video video {
-        /* border: 3px solid yellow; */
+        border: 3px solid yellow;
         width: 80%;
         height: 100vh;
     }
 
     .apoiadores {
-        /* border: 4px solid brown; */
+        border: 4px solid brown;
     }
 
     .apoiadores .flex-container {
-        /* border: 4px solid blue; */
+        border: 4px solid blue;
         width: 100%;
         padding: 0 10px;
     }
 
     .apoiadores .flex-container img {
         width: 70%;
-    }
+    } */
 }
+
 
 @media (max-width: 600px) {
     .evento-encontro .logo-primeiro-encontro img {
@@ -400,7 +472,6 @@
         padding: 0 10px;
     }
 }
-
 
     /* ===== QUEM SOMOS ===== */
     .quem-somos {
@@ -451,9 +522,9 @@
     }
 
     @media (max-width: 550px) {
-        .quem-somos {
-            /* border: 3px solid turquoise; */
-        }
+        /* .quem-somos {
+            border: 3px solid turquoise;
+        } */
 
         .quem-somos-content {
             /* border: 3px solid red; */
@@ -680,11 +751,9 @@
         justify-content: start;
     }
 
-
-
-    .galeria-item #galeria-botao {
-        /* border: 3px solid salmon; */
-    }
+    /* .galeria-item #galeria-botao {
+        border: 3px solid salmon;
+    } */
 
     .galeria-grid {
         /* border: 5px solid green; */
@@ -877,9 +946,9 @@
         font-family: 'Raleway', sans-serif;
     }
 
-    .redes-sociais {
-        /* border: 3px solid red; */
-    }
+    /* .redes-sociais {
+        border: 3px solid red;
+    } */
 
     .redes-sociais h4 {
         color: var(--cor-subtitulo);
@@ -1079,9 +1148,9 @@
         height: auto;
     }
 
-    .footer-logo p {
-        /* border: 4px solid yellowgreen; */
-    }
+    /* .footer-logo p {
+        border: 4px solid yellowgreen;
+    } */
     
     .nav.active {
         display: block;
