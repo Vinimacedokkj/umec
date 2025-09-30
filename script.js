@@ -38,5 +38,105 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
         box-shadow: 0 4px 12px rgba(162, 139, 66, 0.3);
         transition: all 0.3s ease;
         z-index: 1000;
-    `;document.body.appendChild(scrollTopBtn);window.addEventListener('scroll',function(){if(window.pageYOffset>300){scrollTopBtn.style.display='flex'}else{scrollTopBtn.style.display='none'}});scrollTopBtn.addEventListener('click',function(){window.scrollTo({top:0,behavior:'smooth'})});scrollTopBtn.addEventListener('mouseenter',function(){this.style.backgroundColor='var(--cor-secundaria)';this.style.transform='scale(1.1)'});scrollTopBtn.addEventListener('mouseleave',function(){this.style.backgroundColor='var(--cor-principal)';this.style.transform='scale(1)'});const contactForm=document.querySelector('form');if(contactForm){contactForm.addEventListener('submit',function(e){e.preventDefault();showNotification('Mensagem enviada com sucesso! Em breve entraremos em contato.','success');this.reset()})}
-window.addEventListener('load',function(){const preloader=document.querySelector('.preloader');if(preloader){preloader.style.opacity='0';setTimeout(()=>{preloader.style.display='none'},500)}});const inputs=document.querySelectorAll('input, textarea');inputs.forEach(input=>{input.addEventListener('blur',function(){if(this.value.trim()===''){this.style.borderColor='#f44336'}else{this.style.borderColor='var(--cor-principal)'}});input.addEventListener('focus',function(){this.style.borderColor='var(--cor-principal)'})});console.log('Site UMEC carregado com sucesso! 🚀')});const openers=document.querySelectorAll(".open-modal");openers.forEach((element)=>{element.addEventListener("click",function(){const id=element.id;document.getElementById("modal").classList.remove("hidden");const modalImages=document.querySelector(".modal-images");modalImages.innerHTML="";const images=getImagesForSection(id);images.forEach((src)=>{const img=document.createElement("img");img.src=src;modalImages.appendChild(img)})})});document.querySelector(".close-btn").addEventListener("click",function(){document.getElementById("modal").classList.add("hidden")})
+    `;
+    
+    document.body.appendChild(scrollTopBtn);
+    
+    // Mostrar/ocultar botão baseado no scroll
+    window.addEventListener('scroll', function() {
+        if (window.pageYOffset > 300) {
+            scrollTopBtn.style.display = 'flex';
+        } else {
+            scrollTopBtn.style.display = 'none';
+        }
+    });
+    
+    // Funcionalidade do botão
+    scrollTopBtn.addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    });
+    
+    // Hover effect
+    scrollTopBtn.addEventListener('mouseenter', function() {
+        this.style.backgroundColor = 'var(--cor-secundaria)';
+        this.style.transform = 'scale(1.1)';
+    });
+    
+    scrollTopBtn.addEventListener('mouseleave', function() {
+        this.style.backgroundColor = 'var(--cor-principal)';
+        this.style.transform = 'scale(1)';
+    });
+    
+    // ===== FORMULÁRIO DE CONTATO (se existir) =====
+    const contactForm = document.querySelector('form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            showNotification('Mensagem enviada com sucesso! Em breve entraremos em contato.', 'success');
+            this.reset();
+        });
+    }
+    
+    // ===== PRELOADER (opcional) =====
+    window.addEventListener('load', function() {
+        const preloader = document.querySelector('.preloader');
+        if (preloader) {
+            preloader.style.opacity = '0';
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 500);
+        }
+    });
+    
+    // ===== VALIDAÇÃO DE FORMULÁRIOS =====
+    const inputs = document.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            if (this.value.trim() === '') {
+                this.style.borderColor = '#f44336';
+            } else {
+                this.style.borderColor = 'var(--cor-principal)';
+            }
+        });
+        
+        input.addEventListener('focus', function() {
+            this.style.borderColor = 'var(--cor-principal)';
+        });
+    });
+    
+    console.log('Site UMEC carregado com sucesso! 🚀');
+});
+
+// MOSTRAR IMAGENS NA GALERIA DE FOTOS
+function mostrarMaisImagensMocambique() {
+    const imagensOcultas = document.querySelectorAll('.galeria-item#mocambique .galeria-grid .hidden-image');
+    imagensOcultas.forEach(img => {
+        img.classList.remove('hidden-image');
+    });
+
+    const botao = document.getElementById('btn-mocambique');
+    botao.style.display = 'none'; // Oculta o botão após clicar
+}
+
+function mostrarMaisImagensApoioAfrica() {
+    const imagensOcultas = document.querySelectorAll('.galeria-item#apoio-continente-africano .galeria-grid .hidden-image');
+    imagensOcultas.forEach(img => {
+        img.classList.remove('hidden-image');
+    });
+
+    const botao = document.getElementById('btn-apoio-africa');
+    botao.style.display = 'none'; // Oculta o botão após clicar
+}
+
+function mostrarMaisImagensColatam() {
+    const imagensOcultas = document.querySelectorAll('.galeria-item#encontro-colatam .galeria-grid .hidden-image');
+    imagensOcultas.forEach(img => {
+        img.classList.remove('hidden-image');
+    });
+
+    const botao = document.getElementById('btn-colatam');
+    botao.style.display = 'none'; // Oculta o botão após clicar
+}
