@@ -388,13 +388,19 @@
         justify-content: center;
         align-items: center;
     }
+    
+    .evento-encontro .apoiadores .flex-container {
+        /* border: 6px solid yellowgreen; */
+        width: 100%;
+        padding: 0 15px;
+    }
 
-    /* .evento-encontro .apoiadores .flex-container {
-        border: 6px solid yellowgreen;
+    .evento-encontro .apoiadores .flex-container img {
+        /* border: 6px solid red; */
         width: 100%;
     }
 
-
+    /*
     .evento-encontro .logo-primeiro-encontro img {
         width: 70%;
     }
