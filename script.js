@@ -301,244 +301,33 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('Site UMEC carregado com sucesso! 🚀');
 });
 
-// ========= MODAL DE IMAGENS =========
-// Pega todos os elementos com a classe "open-modal"
-const openers = document.querySelectorAll(".open-modal");
-
-openers.forEach((element) => {
-    element.addEventListener("click", function () {
-    const id = element.id;
-
-    // Aqui você pode mostrar o modal específico de acordo com o ID
-    // Exemplo básico:
-    document.getElementById("modal").classList.remove("hidden");
-
-    // Se quiser trocar as imagens dinamicamente, você pode fazer aqui também:
-    const modalImages = document.querySelector(".modal-images");
-    modalImages.innerHTML = ""; // Limpa imagens anteriores
-
-    // Simulação: carrega imagens com base no ID
-    const images = getImagesForSection(id);
-    images.forEach((src) => {
-        const img = document.createElement("img");
-        img.src = src;
-        modalImages.appendChild(img);
+// MOSTRAR IMAGENS NA GALERIA DE FOTOS
+function mostrarMaisImagensMocambique() {
+    const imagensOcultas = document.querySelectorAll('.galeria-item#mocambique .galeria-grid .hidden-image');
+    imagensOcultas.forEach(img => {
+        img.classList.remove('hidden-image');
     });
+
+    const botao = document.getElementById('btn-mocambique');
+    botao.style.display = 'none'; // Oculta o botão após clicar
+}
+
+function mostrarMaisImagensApoioAfrica() {
+    const imagensOcultas = document.querySelectorAll('.galeria-item#apoio-continente-africano .galeria-grid .hidden-image');
+    imagensOcultas.forEach(img => {
+        img.classList.remove('hidden-image');
     });
-});
 
-// Botão para fechar o modal
-document.querySelector(".close-btn").addEventListener("click", function () {
-    document.getElementById("modal").classList.add("hidden");
-});
+    const botao = document.getElementById('btn-apoio-africa');
+    botao.style.display = 'none'; // Oculta o botão após clicar
+}
 
-// Fecha se clicar fora do conteúdo
-// document.getElementById("modal").addEventListener("click", function (e) {
-//     if (e.target.id === "modal") {
-//         document.getElementById("modal").classList.add("hidden");
-//     }
-// });
+function mostrarMaisImagensColatam() {
+    const imagensOcultas = document.querySelectorAll('.galeria-item#encontro-colatam .galeria-grid .hidden-image');
+    imagensOcultas.forEach(img => {
+        img.classList.remove('hidden-image');
+    });
 
-// Função que retorna imagens conforme o ID
-// function getImagesForSection(id) {
-//     const imagens = {
-//     mocambique: [
-//         "/ações/moçambique/fotos/foto (1).jpg",
-//         "/ações/moçambique/fotos/foto (2).jpg",
-//         "/ações/moçambique/fotos/foto (3).jpg",
-//         "/ações/moçambique/fotos/foto (4).jpg",
-//         "/ações/moçambique/fotos/foto (5).jpg",
-//         "/ações/moçambique/fotos/foto (6).jpg",
-//         "/ações/moçambique/fotos/foto (7).jpg",
-//         "/ações/moçambique/fotos/foto (8).jpg",
-//         "/ações/moçambique/fotos/foto (9).jpg",
-//         "/ações/moçambique/fotos/foto (10).jpg",
-//         "/ações/moçambique/fotos/foto (11).jpg",
-//         "/ações/moçambique/fotos/foto (12).jpg",
-//         "/ações/moçambique/fotos/foto (13).jpg",
-//         "/ações/moçambique/fotos/foto (14).jpg",
-//         "/ações/moçambique/fotos/foto (15).jpg",
-//         "/ações/moçambique/fotos/foto (16).jpg",
-//         "/ações/moçambique/fotos/foto (17).jpg",
-//         "/ações/moçambique/fotos/foto (18).jpg",
-//         "/ações/moçambique/fotos/foto (19).jpg",
-//         "/ações/moçambique/fotos/foto (20).jpg",
-//         "/ações/moçambique/fotos/foto (21).jpg",
-//         "/ações/moçambique/fotos/foto (22).jpg",
-//         "/ações/moçambique/fotos/foto (23).jpg",
-//         "/ações/moçambique/fotos/foto (24).jpg",
-//         "/ações/moçambique/fotos/foto (25).jpg",
-//         "/ações/moçambique/fotos/foto (26).jpg",
-//         "/ações/moçambique/fotos/foto (27).jpg",
-//         "/ações/moçambique/fotos/foto (28).jpg",
-//         "/ações/moçambique/fotos/foto (29).jpg",
-//         "/ações/moçambique/fotos/foto (30).jpg",
-//         "/ações/moçambique/fotos/foto (31).jpg",
-//         "/ações/moçambique/fotos/foto (32).jpg",
-//         "/ações/moçambique/fotos/foto (33).jpg",
-//         "/ações/moçambique/fotos/foto (34).jpg",
-//         "/ações/moçambique/fotos/foto (35).jpg",
-//         "/ações/moçambique/fotos/foto (36).jpg",
-//         "/ações/moçambique/fotos/foto (37).jpg",
-//         "/ações/moçambique/fotos/foto (38).jpg",
-//         "/ações/moçambique/fotos/foto (39).jpg",
-//         "/ações/moçambique/fotos/foto (40).jpg",
-//         "/ações/moçambique/fotos/foto (41).jpg",
-//         "/ações/moçambique/fotos/foto (42).jpg",
-//         "/ações/moçambique/fotos/foto (43).jpg",
-//         "/ações/moçambique/fotos/foto (44).jpg",
-//         "/ações/moçambique/fotos/foto (45).jpg",
-//         "/ações/moçambique/fotos/foto (46).jpg",
-//         "/ações/moçambique/fotos/foto (47).jpg",
-//         "/ações/moçambique/fotos/foto (48).jpg",
-//         "/ações/moçambique/fotos/foto (49).jpg",
-//         "/ações/moçambique/fotos/foto (50).jpg",
-//         "/ações/moçambique/fotos/foto (51).jpg",
-//         "/ações/moçambique/fotos/foto (52).jpg",
-//         "/ações/moçambique/fotos/foto (53).jpg",
-//         "/ações/moçambique/fotos/foto (54).jpg",
-//         "/ações/moçambique/fotos/foto (55).jpg",
-//         "/ações/moçambique/fotos/foto (56).jpg",
-//         "/ações/moçambique/fotos/foto (57).jpg",
-//         "/ações/moçambique/fotos/foto (58).jpg",
-//         "/ações/moçambique/fotos/foto (59).jpg",
-//         "/ações/moçambique/fotos/foto (60).jpg",
-//         "/ações/moçambique/fotos/foto (61).jpg",
-//         "/ações/moçambique/fotos/foto (62).jpg",
-//         "/ações/moçambique/fotos/foto (63).jpg",
-//         "/ações/moçambique/fotos/foto (64).jpg",
-//         "/ações/moçambique/fotos/foto (65).jpg",
-//         "/ações/moçambique/fotos/foto (66).jpg",
-//         "/ações/moçambique/fotos/foto (67).jpg",
-//         "/ações/moçambique/fotos/foto (68).jpg",
-//         "/ações/moçambique/fotos/foto (69).jpg",
-//         "/ações/moçambique/fotos/foto (70).jpg",
-//         "/ações/moçambique/fotos/foto (71).jpg",
-//         "/ações/moçambique/fotos/foto (72).jpg",
-//         "/ações/moçambique/fotos/foto (73).jpg",
-//         "/ações/moçambique/fotos/foto (74).jpg",
-//         "/ações/moçambique/fotos/foto (75).jpg",
-//         "/ações/moçambique/fotos/foto (76).jpg",
-//         "/ações/moçambique/fotos/foto (77).jpg",
-//         "/ações/moçambique/fotos/foto (78).jpg",
-//         "/ações/moçambique/fotos/foto (79).jpg",
-//         "/ações/moçambique/fotos/foto (80).jpg",
-//         "/ações/moçambique/fotos/foto (81).jpg",
-//         "/ações/moçambique/fotos/foto (82).jpg",
-//         "/ações/moçambique/fotos/foto (83).jpg",
-//         "/ações/moçambique/fotos/foto (84).jpg",
-//         "/ações/moçambique/fotos/foto (85).jpg",
-//         "/ações/moçambique/fotos/foto (86).jpg",
-//         "/ações/moçambique/fotos/foto (87).jpg",
-//         "/ações/moçambique/fotos/foto (88).jpg",
-//         "/ações/moçambique/fotos/foto (89).jpg",
-//         "/ações/moçambique/fotos/foto (90).jpg",
-//         "/ações/moçambique/fotos/foto (91).jpg",
-//         "/ações/moçambique/fotos/foto (92).jpg",
-//         "/ações/moçambique/fotos/foto (93).jpg",
-//         "/ações/moçambique/fotos/foto (94).jpg",
-//         "/ações/moçambique/fotos/foto (95).jpg"
-//     ],
-
-//     ['irmaos-continente-africano']: [
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (1).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (2).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (3).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (4).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (5).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (6).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (7).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (8).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (9).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (10).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (11).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (12).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (13).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (14).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (15).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (16).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (17).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (18).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (19).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (21).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (22).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (23).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (24).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (25).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (26).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (27).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (28).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (29).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (30).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (31).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (32).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (33).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (34).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (35).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (36).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (37).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (38).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (39).jpg",
-//         "/ações/ajudando\ os\ irmaos\ do\ continente\ africano/fotos/foto (40).jpg"
-//     ],
-
-//     ['assembleia-legislativa']: [
-//         "/ações/assembleia\ legislativa/fotos/foto (1).jpg",
-//         "/ações/assembleia\ legislativa/fotos/foto (2).jpg",
-//         "/ações/assembleia\ legislativa/fotos/foto (3).jpg"
-//     ],
-
-//     ['encontro-conlatam']: [
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (1).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (2).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (3).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (4).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (5).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (6).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (7).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (8).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (9).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (10).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (11).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (12).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (13).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (14).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (15).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (16).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (17).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (18).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (19).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (20).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (21).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (22).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (23).jpg",
-//         "/ações/encontro\ da\ CONLATAM/fotos/foto (24).jpg"
-//     ],
-    
-//     ['reuniao-fernando']: [
-//         "/ações/reunião\ com\ Fernando\ Manholer/fotos/foto (1).jpg",
-//         "/ações/reunião\ com\ Fernando\ Manholer/fotos/foto (2).jpg",
-//         "/ações/reunião\ com\ Fernando\ Manholer/fotos/foto (3).jpg"
-//     ],
-
-//     ['reuniao-representantes']: [
-//         "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (1).jpg",
-//         "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (2).jpg",
-//         "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (3).jpg",
-//         "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (4).jpg",
-//         "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (5).jpg",
-//         "/ações/reunião\ com\ representantes\ de\ 06\ estados\ brasileiros/fotos/foto (6).jpg"
-//     ],
-
-//     ['reuniao-ministros']: [
-//         "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (1).jpg",
-//         "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (2).jpg",
-//         "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (3).jpg",
-//         "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (4).jpg",
-//         "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (5).jpg",
-//         "/ações/reunião\ dos\ ministros\ de\ cada\ país/fotos/foto (6).jpg"
-//     ]
-//     };
-
-//     return imagens[id] || [];
-// }
+    const botao = document.getElementById('btn-colatam');
+    botao.style.display = 'none'; // Oculta o botão após clicar
+}
