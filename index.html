@@ -104,14 +104,14 @@
             <div class="formulario-card">
                 <div class="formulario-header">
                     <h2 class="formulario-titulo">Cadastre sua empresa  </h2>
-                    <p class="formulario-subtitulo">Participe do 1º Encontro Internacional de Empresários Brasil-África</p>
+                    <p class="formulario-subtitulo"><strong>Participe do Primeiro Encontro Internacional de Empresários Brasil-África</strong></p>
                     <div class="investimento-info">
                         <div class="valor-investimento">
-                            <span class="moeda">$</span>
-                            <span class="valor">1125.77</span>
-                            <span class="periodo">por empresa</span>
+                            <span class="moeda">R$</span>
+                            <span class="valor">6.000,00</span>
+                            <!-- <span class="periodo">por empresa</span> -->
                         </div>
-                        <p class="descricao-investimento">Valor do investimento para participação no evento</p>
+                        <p class="descricao-investimento">Valor do investimento para participação</p>
                     </div>
                 </div>
                 
@@ -168,6 +168,11 @@
                         <h3 class="secao-titulo">Endereço da Empresa</h3>
                         
                         <div class="campo-grupo">
+                            <label for="pais" class="campo-label">País *</label>
+                            <input type="text" id="pais" name="pais" class="campo-input" placeholder="País" required>
+                        </div>
+
+                        <div class="campo-grupo">
                             <label for="cep" class="campo-label">CEP *</label>
                             <input type="text" id="cep" name="cep" class="campo-input" placeholder="00000-000" required>
                         </div>
@@ -196,8 +201,13 @@
                             <label for="cidade" class="campo-label">Cidade *</label>
                             <input type="text" id="cidade" name="cidade" class="campo-input" placeholder="Cidade" required>
                         </div>
-                        
+
                         <div class="campo-grupo">
+                            <label for="estado" class="campo-label">Estado *</label>
+                            <input type="text" id="estado" name="estado" class="campo-input" placeholder="Estado" required>
+                        </div>
+                        
+                        <!-- <div class="campo-grupo">
                             <label for="estado" class="campo-label">Estado *</label>
                             <select id="estado" name="estado" class="campo-select" required>
                                 <option value="">Selecione o estado</option>
@@ -229,11 +239,11 @@
                                 <option value="SE">Sergipe</option>
                                 <option value="TO">Tocantins</option>
                             </select>
-                        </div>
+                        </div> -->
                     </div>
                     
                     <div class="formulario-secao">
-                        <h3 class="secao-titulo">Área de Investimento</h3>
+                        <h3 class="secao-titulo">Sobre a empresa</h3>
                         
                         <div class="campo-grupo">
                             <label for="setor-atuacao" class="campo-label">Setor de Atuação *</label>
@@ -267,7 +277,7 @@
                         </div>
                         
                         <div class="campo-grupo">
-                            <label for="experiencia-internacional" class="campo-label">Experiência Internacional</label>
+                            <label for="experiencia-internacional" class="campo-label">Nível da experiência Internacional</label>
                             <select id="experiencia-internacional" name="experiencia-internacional" class="campo-select">
                                 <option value="">Selecione sua experiência</option>
                                 <option value="nenhuma">Nenhuma experiência</option>
@@ -278,8 +288,8 @@
                         </div>
                         
                         <div class="campo-grupo">
-                            <label for="objetivos" class="campo-label">Objetivos com o Investimento *</label>
-                            <textarea id="objetivos" name="objetivos" class="campo-textarea" placeholder="Descreva os objetivos da empresa com a participação no evento e possíveis investimentos na África" rows="4" required></textarea>
+                            <label for="objetivos" class="campo-label">Objetivos da participação do evento *</label>
+                            <textarea id="objetivos" name="objetivos" class="campo-textarea" placeholder="Descreva os objetivos da empresa com a participação no evento e possíveis investimentos" rows="4" required></textarea>
                         </div>
                     </div>
                     
@@ -351,8 +361,8 @@
                                 <div id="qrcode"></div>
                             </div>
                             <div class="pix-dados">
-                                <p><strong>Chave PIX:</strong> 11917168416</p>
-                                <p><strong>Valor:</strong> R$ 10,00</p>
+                                <p><strong>Chave PIX:</strong> 11930145556</p>
+                                <p><strong>Valor:</strong> R$ 6.000,00</p>
                                 <div class="timer-pix">
                                     <p><strong>Tempo restante:</strong> <span id="timer-pix">10:00</span></p>
                                 </div>
@@ -369,10 +379,10 @@
                     <div id="area-cartao" class="area-pagamento" style="display: none;">
                         <h4>Pagamento via Cartão de Crédito</h4>
                         <div class="cartao-info">
-                            <p>Para pagamento com cartão de crédito, entre em contato conosco:</p>
-                            <p><strong>Email:</strong> presidencia@umecglobal.org</p>
-                            <p><strong>WhatsApp:</strong> (11) 91716-8416</p>
-                            <p>Nossa equipe entrará em contato para processar o pagamento.</p>
+                            <p>Para pagamento com cartão de crédito, siga o link abaixo para pagamento:</p>
+                            <!-- <p><strong>Email:</strong> presidencia@umecglobal.org</p> -->
+                            <!-- <p><strong>WhatsApp:</strong> (11) 91716-8416</p> -->
+                            <a href="https://pagseguro.uol.com.br/v2/checkout/payment.html?token=8F4B6886819640808217803756366072" target="_blank">Realizar o pagamento</a>
                         </div>
                     </div>
                 </div>
@@ -398,9 +408,9 @@
                 <div class="proximos-passos">
                     <h3>Próximos Passos</h3>
                     <ul>
-                        <li>Nossa equipe entrará em contato para confirmar os detalhes</li>
-                        <li>O ingresso será enviado após confirmação do pagamento</li>
-                        <li>Você receberá informações sobre o evento por WhatsApp</li>
+                        <!-- <li>Nossa equipe entrará em contato para confirmar os detalhes</li> -->
+                        <!-- <li>O ingresso será enviado após confirmação do pagamento</li> -->
+                        <li>Você receberá as informações sobre o evento via e-mail!</li>
                     </ul>
                 </div>
                 <button class="btn-voltar" onclick="voltarFormulario()">

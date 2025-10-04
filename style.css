@@ -1920,8 +1920,8 @@
 
 .formulario-subtitulo {
     color: var(--cor-subtitulo);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    margin: 2rem 0;
     font-weight: 500;
 }
 
