@@ -99,6 +99,316 @@
                 <img src="/assets/apoiadores/todas as logos juntas fundo transparente.png" alt="Agro-África">
             </div>
         </div>
+        <!-- Formulário de Cadastro de Empresa Investidora -->
+        <div class="formulario-container">
+            <div class="formulario-card">
+                <div class="formulario-header">
+                    <h2 class="formulario-titulo">Cadastre sua empresa  </h2>
+                    <p class="formulario-subtitulo">Participe do 1º Encontro Internacional de Empresários Brasil-África</p>
+                    <div class="investimento-info">
+                        <div class="valor-investimento">
+                            <span class="moeda">$</span>
+                            <span class="valor">1125.77</span>
+                            <span class="periodo">por empresa</span>
+                        </div>
+                        <p class="descricao-investimento">Valor do investimento para participação no evento</p>
+                    </div>
+                </div>
+                
+                <form name="contact" netlify class="formulario-contato" id="formulario-empresa">
+                    <div class="formulario-secao">
+                        <h3 class="secao-titulo">Dados da Empresa</h3>
+                        
+                        <div class="campo-grupo">
+                            <label for="razao-social" class="campo-label">Razão Social *</label>
+                            <input type="text" id="razao-social" name="razao-social" class="campo-input" placeholder="Digite a razão social da empresa" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="nome-fantasia" class="campo-label">Nome Fantasia</label>
+                            <input type="text" id="nome-fantasia" name="nome-fantasia" class="campo-input" placeholder="Nome comercial da empresa">
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="cnpj" class="campo-label">CNPJ *</label>
+                            <input type="text" id="cnpj" name="cnpj" class="campo-input" placeholder="00.000.000/0000-00" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="inscricao-estadual" class="campo-label">Inscrição Estadual</label>
+                            <input type="text" id="inscricao-estadual" name="inscricao-estadual" class="campo-input" placeholder="Inscrição Estadual (se houver)">
+                        </div>
+                    </div>
+                    
+                    <div class="formulario-secao">
+                        <h3 class="secao-titulo">Representante Legal</h3>
+                        
+                        <div class="campo-grupo">
+                            <label for="nome-representante" class="campo-label">Nome Completo do Representante *</label>
+                            <input type="text" id="nome-representante" name="nome-representante" class="campo-input" placeholder="Nome completo do representante legal" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="cargo-representante" class="campo-label">Cargo *</label>
+                            <input type="text" id="cargo-representante" name="cargo-representante" class="campo-input" placeholder="Cargo do representante" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="email-representante" class="campo-label">Email *</label>
+                            <input type="email" id="email-representante" name="email-representante" class="campo-input" placeholder="email@empresa.com" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="telefone-representante" class="campo-label">Telefone/WhatsApp *</label>
+                            <input type="tel" id="telefone-representante" name="telefone-representante" class="campo-input" placeholder="(00) 00000-0000" required>
+                        </div>
+                    </div>
+                    
+                    <div class="formulario-secao">
+                        <h3 class="secao-titulo">Endereço da Empresa</h3>
+                        
+                        <div class="campo-grupo">
+                            <label for="cep" class="campo-label">CEP *</label>
+                            <input type="text" id="cep" name="cep" class="campo-input" placeholder="00000-000" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="endereco" class="campo-label">Endereço *</label>
+                            <input type="text" id="endereco" name="endereco" class="campo-input" placeholder="Rua, Avenida, etc." required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="numero" class="campo-label">Número *</label>
+                            <input type="text" id="numero" name="numero" class="campo-input" placeholder="Número" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="complemento" class="campo-label">Complemento</label>
+                            <input type="text" id="complemento" name="complemento" class="campo-input" placeholder="Apartamento, sala, etc.">
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="bairro" class="campo-label">Bairro *</label>
+                            <input type="text" id="bairro" name="bairro" class="campo-input" placeholder="Bairro" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="cidade" class="campo-label">Cidade *</label>
+                            <input type="text" id="cidade" name="cidade" class="campo-input" placeholder="Cidade" required>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="estado" class="campo-label">Estado *</label>
+                            <select id="estado" name="estado" class="campo-select" required>
+                                <option value="">Selecione o estado</option>
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="formulario-secao">
+                        <h3 class="secao-titulo">Área de Investimento</h3>
+                        
+                        <div class="campo-grupo">
+                            <label for="setor-atuacao" class="campo-label">Setor de Atuação *</label>
+                            <select id="setor-atuacao" name="setor-atuacao" class="campo-select" required>
+                                <option value="">Selecione o setor</option>
+                                <option value="agropecuaria">Agropecuária</option>
+                                <option value="tecnologia">Tecnologia</option>
+                                <option value="alimentos">Alimentos</option>
+                                <option value="piscicultura">Piscicultura</option>
+                                <option value="educacao">Educação</option>
+                                <option value="saude">Saúde</option>
+                                <option value="seguranca">Segurança</option>
+                                <option value="infraestrutura">Infraestrutura</option>
+                                <option value="energia">Energia</option>
+                                <option value="construcao">Construção Civil</option>
+                                <option value="comercio">Comércio</option>
+                                <option value="servicos">Serviços</option>
+                                <option value="outros">Outros</option>
+                            </select>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="tamanho-empresa" class="campo-label">Porte da Empresa *</label>
+                            <select id="tamanho-empresa" name="tamanho-empresa" class="campo-select" required>
+                                <option value="">Selecione o porte</option>
+                                <option value="micro">Microempresa (até 9 funcionários)</option>
+                                <option value="pequena">Pequena Empresa (10-49 funcionários)</option>
+                                <option value="media">Média Empresa (50-249 funcionários)</option>
+                                <option value="grande">Grande Empresa (250+ funcionários)</option>
+                            </select>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="experiencia-internacional" class="campo-label">Experiência Internacional</label>
+                            <select id="experiencia-internacional" name="experiencia-internacional" class="campo-select">
+                                <option value="">Selecione sua experiência</option>
+                                <option value="nenhuma">Nenhuma experiência</option>
+                                <option value="pouca">Pouca experiência</option>
+                                <option value="moderada">Experiência moderada</option>
+                                <option value="extensa">Extensa experiência</option>
+                            </select>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="objetivos" class="campo-label">Objetivos com o Investimento *</label>
+                            <textarea id="objetivos" name="objetivos" class="campo-textarea" placeholder="Descreva os objetivos da empresa com a participação no evento e possíveis investimentos na África" rows="4" required></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="formulario-secao">
+                        <div class="campo-grupo checkbox-grupo">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="aceite-termos" required>
+                                <span class="checkmark"></span>
+                                Aceito os termos e condições do evento e confirmação de investimento *
+                            </label>
+                        </div>
+                        
+                        <div class="campo-grupo checkbox-grupo">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="aceite-newsletter">
+                                <span class="checkmark"></span>
+                                Desejo receber informações sobre futuros eventos e oportunidades da UMEC
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="formulario-botoes">
+                        <button type="submit" class="btn-enviar">
+                            <i class="fas fa-check-circle"></i>
+                            Validar e Prosseguir para Pagamento
+                        </button>
+                        <button type="reset" class="btn-limpar">
+                            <i class="fas fa-eraser"></i>
+                            Limpar Formulário
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Modal de Pagamento -->
+        <div id="modal-pagamento" class="modal-pagamento">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3>Confirmação de Investimento</h3>
+                    <span class="close-modal">&times;</span>
+                </div>
+                <div class="modal-body">
+                    <div class="empresa-info">
+                        <h4>Dados da Empresa</h4>
+                        <p><strong>Razão Social:</strong> <span id="modal-razao-social"></span></p>
+                        <p><strong>CNPJ:</strong> <span id="modal-cnpj"></span></p>
+                        <p><strong>Valor do Investimento:</strong> <span class="valor-destaque">R$ 10,00</span></p>
+                    </div>
+                    
+                    <div class="pagamento-opcoes">
+                        <h4>Escolha a Forma de Pagamento</h4>
+                        <div class="opcoes-pagamento">
+                            <button class="btn-pagamento" id="btn-pix">
+                                <i class="fas fa-qrcode"></i>
+                                PIX
+                            </button>
+                            <button class="btn-pagamento" id="btn-cartao">
+                                <i class="fas fa-credit-card"></i>
+                                Cartão de Crédito
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div id="area-pix" class="area-pagamento" style="display: none;">
+                        <h4>Pagamento via PIX</h4>
+                        <div class="pix-info">
+                            <div class="qr-code">
+                                <div id="qrcode"></div>
+                            </div>
+                            <div class="pix-dados">
+                                <p><strong>Chave PIX:</strong> 11917168416</p>
+                                <p><strong>Valor:</strong> R$ 10,00</p>
+                                <div class="timer-pix">
+                                    <p><strong>Tempo restante:</strong> <span id="timer-pix">10:00</span></p>
+                                </div>
+                                <button class="btn-copiar-pix" onclick="copiarChavePix()">
+                                    <i class="fas fa-copy"></i> Copiar Chave PIX
+                                </button>
+                                <button class="btn-confirmar-pix" onclick="confirmarPagamentoPix()">
+                                    <i class="fas fa-check"></i> Já realizei o PIX
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div id="area-cartao" class="area-pagamento" style="display: none;">
+                        <h4>Pagamento via Cartão de Crédito</h4>
+                        <div class="cartao-info">
+                            <p>Para pagamento com cartão de crédito, entre em contato conosco:</p>
+                            <p><strong>Email:</strong> presidencia@umecglobal.org</p>
+                            <p><strong>WhatsApp:</strong> (11) 91716-8416</p>
+                            <p>Nossa equipe entrará em contato para processar o pagamento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Página de Confirmação -->
+        <div id="pagina-confirmacao" class="pagina-confirmacao" style="display: none;">
+            <div class="confirmacao-card">
+                <div class="confirmacao-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <h2>Obrigado por Acreditar na UMEC!</h2>
+                <p class="confirmacao-texto">
+                    Sua empresa foi cadastrada com sucesso no 1º Encontro Internacional de Empresários Brasil-África.
+                </p>
+                <div class="detalhes-investimento">
+                    <h3>Detalhes do Investimento</h3>
+                    <p><strong>Empresa:</strong> <span id="conf-razao-social"></span></p>
+                    <p><strong>CNPJ:</strong> <span id="conf-cnpj"></span></p>
+                    <p><strong>Valor:</strong> R$ 10,00</p>
+                </div>
+                <div class="proximos-passos">
+                    <h3>Próximos Passos</h3>
+                    <ul>
+                        <li>Nossa equipe entrará em contato para confirmar os detalhes</li>
+                        <li>O ingresso será enviado após confirmação do pagamento</li>
+                        <li>Você receberá informações sobre o evento por WhatsApp</li>
+                    </ul>
+                </div>
+                <button class="btn-voltar" onclick="voltarFormulario()">
+                    <i class="fas fa-arrow-left"></i>
+                    Voltar ao Formulário
+                </button>
+            </div>
+        </div>
     </section>
 
     <!-- Hero Section -->
@@ -980,5 +1290,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
 </body>
 </html>

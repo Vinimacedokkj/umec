@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== FUNCIONALIDADE DE COPIAR PIX =====
     window.copyPix = function() {
-        const pixKey = '11917168416';
+        const pixKey = '11930145556';
         
         if (navigator.clipboard) {
             navigator.clipboard.writeText(pixKey).then(function() {
@@ -261,15 +261,360 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
     });
     
-    // ===== FORMULÁRIO DE CONTATO (se existir) =====
-    const contactForm = document.querySelector('form');
+    // ===== FORMULÁRIO DE CADASTRO DE EMPRESA INVESTIDORA =====
+    const contactForm = document.querySelector('.formulario-contato');
+    const modalPagamento = document.getElementById('modal-pagamento');
+    const paginaConfirmacao = document.getElementById('pagina-confirmacao');
+    
     if (contactForm) {
+        // Validação em tempo real
+        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('blur', function() {
+                validateField(this);
+            });
+            
+            input.addEventListener('input', function() {
+                if (this.classList.contains('error')) {
+                    validateField(this);
+                }
+            });
+        });
+        
+        // Máscara para telefone
+        const telefoneInput = document.getElementById('telefone-representante');
+        if (telefoneInput) {
+            telefoneInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length <= 11) {
+                    value = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+                    if (value.length < 14) {
+                        value = value.replace(/(\d{2})(\d{4})(\d{4})/, '($1) $2-$3');
+                    }
+                }
+                e.target.value = value;
+            });
+        }
+        
+        // Máscara para CNPJ
+        const cnpjInput = document.getElementById('cnpj');
+        if (cnpjInput) {
+            cnpjInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                value = value.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5');
+                if (value.length > 18) value = value.substring(0, 18);
+                e.target.value = value;
+            });
+        }
+        
+        // Máscara para CEP
+        const cepInput = document.getElementById('cep');
+        if (cepInput) {
+            cepInput.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                value = value.replace(/(\d{5})(\d{3})/, '$1-$2');
+                if (value.length > 9) value = value.substring(0, 9);
+                e.target.value = value;
+            });
+        }
+        
+        // Validação do formulário
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            showNotification('Mensagem enviada com sucesso! Em breve entraremos em contato.', 'success');
-            this.reset();
+            
+            let isValid = true;
+            const requiredFields = contactForm.querySelectorAll('[required]');
+            
+            requiredFields.forEach(field => {
+                if (!validateField(field)) {
+                    isValid = false;
+                }
+            });
+            
+            if (isValid) {
+                // Preencher dados no modal
+                preencherModalPagamento();
+                // Mostrar modal de pagamento
+                modalPagamento.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                showNotification('Por favor, preencha todos os campos obrigatórios corretamente.', 'error');
+            }
+        });
+        
+        // Função de validação de campo
+        function validateField(field) {
+            const value = field.value.trim();
+            let isValid = true;
+            
+            // Remover classes anteriores
+            field.classList.remove('error', 'success');
+            
+            // Validação de campos obrigatórios
+            if (field.hasAttribute('required') && !value) {
+                isValid = false;
+            }
+            
+            // Validações específicas
+            if (value && field.type === 'email') {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailRegex.test(value)) {
+                    isValid = false;
+                }
+            }
+            
+            if (value && field.id === 'telefone-representante') {
+                const phoneRegex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
+                if (!phoneRegex.test(value)) {
+                    isValid = false;
+                }
+            }
+            
+            if (value && field.id === 'cnpj') {
+                if (!isValidCNPJ(value)) {
+                    isValid = false;
+                }
+            }
+            
+            if (value && field.id === 'cep') {
+                const cepRegex = /^\d{5}-\d{3}$/;
+                if (!cepRegex.test(value)) {
+                    isValid = false;
+                }
+            }
+            
+            // Aplicar classes de validação
+            if (isValid) {
+                field.classList.add('success');
+            } else {
+                field.classList.add('error');
+            }
+            
+            return isValid;
+        }
+        
+        // Validação de CNPJ
+        function isValidCNPJ(cnpj) {
+            cnpj = cnpj.replace(/\D/g, '');
+            if (cnpj.length !== 14) return false;
+            
+            // Verificar se todos os dígitos são iguais
+            if (/^(\d)\1{13}$/.test(cnpj)) return false;
+            
+            // Validar primeiro dígito verificador
+            let sum = 0;
+            let weight = 2;
+            for (let i = 11; i >= 0; i--) {
+                sum += parseInt(cnpj.charAt(i)) * weight;
+                weight = weight === 9 ? 2 : weight + 1;
+            }
+            let remainder = sum % 11;
+            let digit1 = remainder < 2 ? 0 : 11 - remainder;
+            if (digit1 !== parseInt(cnpj.charAt(12))) return false;
+            
+            // Validar segundo dígito verificador
+            sum = 0;
+            weight = 2;
+            for (let i = 12; i >= 0; i--) {
+                sum += parseInt(cnpj.charAt(i)) * weight;
+                weight = weight === 9 ? 2 : weight + 1;
+            }
+            remainder = sum % 11;
+            let digit2 = remainder < 2 ? 0 : 11 - remainder;
+            if (digit2 !== parseInt(cnpj.charAt(13))) return false;
+            
+            return true;
+        }
+        
+        // Preencher modal de pagamento
+        function preencherModalPagamento() {
+            const razaoSocial = document.getElementById('razao-social').value;
+            const cnpj = document.getElementById('cnpj').value;
+            
+            document.getElementById('modal-razao-social').textContent = razaoSocial;
+            document.getElementById('modal-cnpj').textContent = cnpj;
+        }
+    }
+    
+    // ===== SISTEMA DE PAGAMENTO =====
+    
+    // Fechar modal
+    const closeModal = document.querySelector('.close-modal');
+    if (closeModal) {
+        closeModal.addEventListener('click', function() {
+            modalPagamento.classList.remove('active');
+            document.body.style.overflow = 'auto';
         });
     }
+    
+    // Fechar modal clicando fora
+    if (modalPagamento) {
+        modalPagamento.addEventListener('click', function(e) {
+            if (e.target === modalPagamento) {
+                modalPagamento.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+        });
+    }
+    
+    // Botões de pagamento
+    const btnPix = document.getElementById('btn-pix');
+    const btnCartao = document.getElementById('btn-cartao');
+    const areaPix = document.getElementById('area-pix');
+    const areaCartao = document.getElementById('area-cartao');
+    
+    if (btnPix && btnCartao) {
+        btnPix.addEventListener('click', function() {
+            btnPix.classList.add('active');
+            btnCartao.classList.remove('active');
+            areaPix.style.display = 'block';
+            areaCartao.style.display = 'none';
+            
+            // Gerar QR Code
+            gerarQRCode();
+        });
+        
+        btnCartao.addEventListener('click', function() {
+            btnCartao.classList.add('active');
+            btnPix.classList.remove('active');
+            areaCartao.style.display = 'block';
+            areaPix.style.display = 'none';
+        });
+    }
+    
+    // Gerar QR Code para PIX
+    function gerarQRCode() {
+        const qrCodeDiv = document.getElementById('qrcode');
+        if (qrCodeDiv && !qrCodeDiv.hasChildNodes()) {
+            // Usar imagem personalizada do QR Code
+            const qrCodeHTML = `
+                <div style="width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin: 0 auto;">
+                    <img src="assets/img/qrcode-pix-pessoal.png" alt="QR Code PIX" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                </div>
+            `;
+            
+            qrCodeDiv.innerHTML = qrCodeHTML;
+            
+            // Iniciar timer de 10 minutos
+            iniciarTimerPix();
+        }
+    }
+    
+    // Timer de 10 minutos para PIX
+    function iniciarTimerPix() {
+        let tempoRestante = 600; // 10 minutos em segundos
+        const timerElement = document.getElementById('timer-pix');
+        
+        if (timerElement) {
+            const timerInterval = setInterval(() => {
+                const minutos = Math.floor(tempoRestante / 60);
+                const segundos = tempoRestante % 60;
+                
+                timerElement.textContent = `${minutos.toString().padStart(2, '0')}:${segundos.toString().padStart(2, '0')}`;
+                
+                if (tempoRestante <= 0) {
+                    clearInterval(timerInterval);
+                    timerElement.textContent = 'Tempo esgotado';
+                    timerElement.style.color = '#e74c3c';
+                }
+                
+                tempoRestante--;
+            }, 1000);
+        }
+    }
+    
+    // Função para copiar chave PIX
+    window.copiarChavePix = function() {
+        const pixKey = '11930145556';
+        
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(pixKey).then(function() {
+                showNotification('Chave PIX copiada com sucesso!', 'success');
+            }).catch(function() {
+                showNotification('Erro ao copiar. Tente novamente.', 'error');
+            });
+        } else {
+            const textArea = document.createElement('textarea');
+            textArea.value = pixKey;
+            document.body.appendChild(textArea);
+            textArea.select();
+            try {
+                document.execCommand('copy');
+                showNotification('Chave PIX copiada com sucesso!', 'success');
+            } catch (err) {
+                showNotification('Erro ao copiar. Tente novamente.', 'error');
+            }
+            document.body.removeChild(textArea);
+        }
+    };
+    
+    // Simular confirmação de pagamento
+    function confirmarPagamento() {
+        // Fechar modal de pagamento
+        modalPagamento.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        
+        // Preencher dados na página de confirmação
+        const razaoSocial = document.getElementById('razao-social').value;
+        const cnpj = document.getElementById('cnpj').value;
+        
+        document.getElementById('conf-razao-social').textContent = razaoSocial;
+        document.getElementById('conf-cnpj').textContent = cnpj;
+        
+        // Mostrar página de confirmação
+        paginaConfirmacao.style.display = 'flex';
+        
+        // Simular envio para Netlify
+        setTimeout(() => {
+            // Aqui você pode adicionar o envio real para o Netlify
+            console.log('Dados enviados para Netlify:', {
+                razaoSocial: razaoSocial,
+                cnpj: cnpj,
+                // ... outros campos
+            });
+        }, 1000);
+    }
+    
+    // Função para confirmar pagamento PIX
+    window.confirmarPagamentoPix = function() {
+        // Fechar modal de pagamento
+        modalPagamento.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        
+        // Preencher dados na página de confirmação
+        const razaoSocial = document.getElementById('razao-social').value;
+        const cnpj = document.getElementById('cnpj').value;
+        
+        document.getElementById('conf-razao-social').textContent = razaoSocial;
+        document.getElementById('conf-cnpj').textContent = cnpj;
+        
+        // Mostrar página de confirmação
+        paginaConfirmacao.style.display = 'flex';
+        
+        // Simular envio para Netlify
+        setTimeout(() => {
+            // Aqui você pode adicionar o envio real para o Netlify
+            console.log('Dados enviados para Netlify:', {
+                razaoSocial: razaoSocial,
+                cnpj: cnpj,
+                // ... outros campos
+            });
+        }, 1000);
+    }
+    
+    // Função para voltar ao formulário
+    window.voltarFormulario = function() {
+        paginaConfirmacao.style.display = 'none';
+        contactForm.reset();
+        
+        // Limpar classes de validação
+        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.classList.remove('error', 'success');
+        });
+    };
+    
+    // Botão de confirmação PIX já está no HTML
     
     // ===== PRELOADER (opcional) =====
     window.addEventListener('load', function() {
