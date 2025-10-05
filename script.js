@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // ===== FUNCIONALIDADE DE COPIAR PIX =====
     window.copyPix = function() {
-        const pixKey = '11930145556';
+        const pixKey = '11917168416';
         
         if (navigator.clipboard) {
             navigator.clipboard.writeText(pixKey).then(function() {
@@ -525,7 +525,7 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Função para copiar chave PIX
     window.copiarChavePix = function() {
-        const pixKey = '11930145556';
+        const pixKey = '11917168416';
         
         if (navigator.clipboard) {
             navigator.clipboard.writeText(pixKey).then(function() {

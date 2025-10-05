@@ -611,6 +611,7 @@
         font-weight: 600;
         color: var(--cor-principal);
         margin-bottom: 0.5rem;
+        font-size: 1.4rem;
     }
 
     .btn-copy {
@@ -2422,10 +2423,17 @@
     font-family: 'Raleway', sans-serif;
 }
 
+.area-pagamento .cartao-info{
+    text-align: left;
+}
+
 .pix-info {
+    /* border: 3px solid blue; */
     display: flex;
-    gap: 2rem;
+    /* gap: 2rem; */
     align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .qr-code {
