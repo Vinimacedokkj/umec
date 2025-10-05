@@ -302,7 +302,7 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
             // Usar imagem personalizada do QR Code
             const qrCodeHTML = `
                 <div style="width: 200px; height: 200px; display: flex; align-items: center; justify-content: center; border-radius: 10px; margin: 0 auto;">
-                    <img src="assets/img/qrcode-pix-pessoal.png" alt="QR Code PIX" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
+                    <img src="assets/img/qrcode-pix-umec.jpg" alt="QR Code PIX" style="width: 100%; height: 100%; object-fit: contain; border-radius: 8px;">
                 </div>
             `;
             
