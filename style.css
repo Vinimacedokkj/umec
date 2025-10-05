@@ -1949,7 +1949,7 @@
 }
 
 .valor {
-    font-size: 3rem;
+    font-size: 2.1rem;
     color: var(--cor-principal);
     font-weight: 700;
     font-family: 'Playfair Display', serif;
@@ -1967,6 +1967,24 @@
     color: var(--cor-texto);
     font-size: 0.95rem;
     margin: 0;
+}
+
+.explicacao-evento {
+    background: rgba(162, 139, 66, 0.03);
+    border-radius: 15px;
+    border: 1px solid rgba(162, 139, 66, 0.1);
+    padding: 2rem;
+    margin: 2rem 0;
+}
+
+.explicacao-evento p {
+    font-size: 1.1rem;
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+.explicacao-evento p:last-child {
+    margin-bottom: 0;
 }
 
 .formulario-secao {
