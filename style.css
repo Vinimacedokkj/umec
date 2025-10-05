@@ -327,6 +327,7 @@
         margin-bottom: 40px;
         border-radius: 20px;
         box-shadow: 2px 2px 20px 0.1px #0000004a;
+        background-color: #ffffff;
     }
 
 @media (max-width: 1000px) {
