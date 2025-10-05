@@ -100,7 +100,13 @@
             </div>
         </div>
         <!-- Formulário de Cadastro de Empresa Investidora -->
-        <div class="formulario-container">
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" class="formulario-container">
+            <!-- Netlify required hidden inputs -->
+            <input type="hidden" name="form-name" value="contact">
+            <p style="display:none">
+                <label>Não preencha este campo: <input name="bot-field" type="text"></label>
+            </p>
+            <input type="hidden" name="payment-method" id="payment-method" value="">
             <div class="formulario-card">
                 <div class="formulario-header">
                     <h2 class="formulario-titulo">Cadastre sua empresa  </h2>
@@ -115,7 +121,7 @@
                     </div>
                 </div>
                 
-                <form name="contact" netlify class="formulario-contato" id="formulario-empresa">
+                <div class="formulario-contato" id="formulario-empresa">
                     <div class="formulario-secao">
                         <h3 class="secao-titulo">Dados da Empresa</h3>
                         
@@ -250,6 +256,7 @@
                             <select id="setor-atuacao" name="setor-atuacao" class="campo-select" required>
                                 <option value="">Selecione o setor</option>
                                 <option value="agropecuaria">Agropecuária</option>
+                                <option value="financeiro">Contabilidade e Finanças</option>
                                 <option value="tecnologia">Tecnologia</option>
                                 <option value="alimentos">Alimentos</option>
                                 <option value="piscicultura">Piscicultura</option>
@@ -321,9 +328,9 @@
                             Limpar Formulário
                         </button>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
         
         <!-- Modal de Pagamento -->
         <div id="modal-pagamento" class="modal-pagamento">
@@ -337,7 +344,7 @@
                         <h4>Dados da Empresa</h4>
                         <p><strong>Razão Social:</strong> <span id="modal-razao-social"></span></p>
                         <p><strong>CNPJ:</strong> <span id="modal-cnpj"></span></p>
-                        <p><strong>Valor do Investimento:</strong> <span class="valor-destaque">R$ 10,00</span></p>
+                        <p><strong>Valor do Investimento:</strong> <span class="valor-destaque">R$ 6.000,00</span></p>
                     </div>
                     
                     <div class="pagamento-opcoes">
@@ -403,7 +410,7 @@
                     <h3>Detalhes do Investimento</h3>
                     <p><strong>Empresa:</strong> <span id="conf-razao-social"></span></p>
                     <p><strong>CNPJ:</strong> <span id="conf-cnpj"></span></p>
-                    <p><strong>Valor:</strong> R$ 10,00</p>
+                    <p><strong>Valor:</strong> R$ 6.000,00</p>
                 </div>
                 <div class="proximos-passos">
                     <h3>Próximos Passos</h3>

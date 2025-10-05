@@ -71,13 +71,14 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
     });
     
     // ===== FORMULÁRIO DE CADASTRO DE EMPRESA INVESTIDORA =====
+    const formElement = document.querySelector('form[name="contact"].formulario-container');
     const contactForm = document.querySelector('.formulario-contato');
     const modalPagamento = document.getElementById('modal-pagamento');
     const paginaConfirmacao = document.getElementById('pagina-confirmacao');
     
-    if (contactForm) {
+    if (formElement && contactForm) {
         // Validação em tempo real
-        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        const inputs = formElement.querySelectorAll('input, select, textarea');
         inputs.forEach(input => {
             input.addEventListener('blur', function() {
                 validateField(this);
@@ -127,12 +128,12 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
             });
         }
         
-        // Validação do formulário
-        contactForm.addEventListener('submit', function(e) {
+        // Validação do formulário (no elemento <form>)
+        formElement.addEventListener('submit', function(e) {
             e.preventDefault();
             
             let isValid = true;
-            const requiredFields = contactForm.querySelectorAll('[required]');
+            const requiredFields = formElement.querySelectorAll('[required]');
             
             requiredFields.forEach(field => {
                 if (!validateField(field)) {
@@ -272,12 +273,14 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
     const areaPix = document.getElementById('area-pix');
     const areaCartao = document.getElementById('area-cartao');
     
+    const paymentMethodInput = document.getElementById('payment-method');
     if (btnPix && btnCartao) {
         btnPix.addEventListener('click', function() {
             btnPix.classList.add('active');
             btnCartao.classList.remove('active');
             areaPix.style.display = 'block';
             areaCartao.style.display = 'none';
+            if (paymentMethodInput) paymentMethodInput.value = 'pix';
             
             // Gerar QR Code
             gerarQRCode();
@@ -288,6 +291,7 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
             btnPix.classList.remove('active');
             areaCartao.style.display = 'block';
             areaPix.style.display = 'none';
+            if (paymentMethodInput) paymentMethodInput.value = 'cartao';
         });
     }
     
@@ -384,40 +388,67 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
         }, 1000);
     }
     
+    // Utilitário para codificar dados como x-www-form-urlencoded
+    function encode(data) {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+            .join('&');
+    }
+
+    // Enviar dados para Netlify
+    function enviarParaNetlify() {
+        if (!formElement) return Promise.resolve();
+        const elements = Array.from(formElement.elements);
+
+        // Construir objeto com todos os campos do formulário
+        const data = { 'form-name': 'contact' };
+        elements.forEach(el => {
+            if (!el.name) return;
+            if (el.type === 'checkbox') {
+                // Capturar estado de checkboxes explicitamente
+                data[el.name] = el.checked ? 'true' : 'false';
+            } else if (el.type === 'radio') {
+                if (el.checked) data[el.name] = el.value;
+            } else if (el.tagName === 'SELECT') {
+                data[el.name] = el.value;
+            } else {
+                data[el.name] = el.value;
+            }
+        });
+
+        return fetch('/', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: encode(data)
+        });
+    }
+
     // Função para confirmar pagamento PIX
     window.confirmarPagamentoPix = function() {
-        // Fechar modal de pagamento
-        modalPagamento.classList.remove('active');
-        document.body.style.overflow = 'auto';
-        
-        // Preencher dados na página de confirmação
-        const razaoSocial = document.getElementById('razao-social').value;
-        const cnpj = document.getElementById('cnpj').value;
-        
-        document.getElementById('conf-razao-social').textContent = razaoSocial;
-        document.getElementById('conf-cnpj').textContent = cnpj;
-        
-        // Mostrar página de confirmação
-        paginaConfirmacao.style.display = 'flex';
-        
-        // Simular envio para Netlify
-        setTimeout(() => {
-            // Aqui você pode adicionar o envio real para o Netlify
-            console.log('Dados enviados para Netlify:', {
-                razaoSocial: razaoSocial,
-                cnpj: cnpj,
-                // ... outros campos
+        if (paymentMethodInput) paymentMethodInput.value = 'pix';
+        enviarParaNetlify()
+            .then(() => {
+                // Fechar modal e mostrar confirmação
+                modalPagamento.classList.remove('active');
+                document.body.style.overflow = 'auto';
+                const razaoSocial = document.getElementById('razao-social').value;
+                const cnpj = document.getElementById('cnpj').value;
+                document.getElementById('conf-razao-social').textContent = razaoSocial;
+                document.getElementById('conf-cnpj').textContent = cnpj;
+                paginaConfirmacao.style.display = 'flex';
+            })
+            .catch(() => {
+                showNotification('Não foi possível enviar seus dados. Tente novamente.', 'error');
             });
-        }, 1000);
     }
     
     // Função para voltar ao formulário
     window.voltarFormulario = function() {
         paginaConfirmacao.style.display = 'none';
-        contactForm.reset();
+        if (formElement) formElement.reset();
         
         // Limpar classes de validação
-        const inputs = contactForm.querySelectorAll('input, select, textarea');
+        const inputs = formElement ? formElement.querySelectorAll('input, select, textarea') : [];
         inputs.forEach(input => {
             input.classList.remove('error', 'success');
         });
