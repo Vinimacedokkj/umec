@@ -142,11 +142,18 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
             });
             
             if (isValid) {
-                // Preencher dados no modal
-                preencherModalPagamento();
-                // Mostrar modal de pagamento
-                modalPagamento.classList.add('active');
-                document.body.style.overflow = 'hidden';
+                // Enviar dados para Netlify imediatamente
+                enviarParaNetlify()
+                    .then(() => {
+                        // Preencher dados no modal
+                        preencherModalPagamento();
+                        // Mostrar modal de pagamento
+                        modalPagamento.classList.add('active');
+                        document.body.style.overflow = 'hidden';
+                    })
+                    .catch(() => {
+                        showNotification('Não foi possível enviar seus dados. Tente novamente.', 'error');
+                    });
             } else {
                 showNotification('Por favor, preencha todos os campos obrigatórios corretamente.', 'error');
             }
@@ -426,20 +433,15 @@ const scrollTopBtn=document.createElement('button');scrollTopBtn.innerHTML='<i c
     // Função para confirmar pagamento PIX
     window.confirmarPagamentoPix = function() {
         if (paymentMethodInput) paymentMethodInput.value = 'pix';
-        enviarParaNetlify()
-            .then(() => {
-                // Fechar modal e mostrar confirmação
-                modalPagamento.classList.remove('active');
-                document.body.style.overflow = 'auto';
-                const razaoSocial = document.getElementById('razao-social').value;
-                const cnpj = document.getElementById('cnpj').value;
-                document.getElementById('conf-razao-social').textContent = razaoSocial;
-                document.getElementById('conf-cnpj').textContent = cnpj;
-                paginaConfirmacao.style.display = 'flex';
-            })
-            .catch(() => {
-                showNotification('Não foi possível enviar seus dados. Tente novamente.', 'error');
-            });
+        
+        // Fechar modal e mostrar confirmação (dados já foram enviados)
+        modalPagamento.classList.remove('active');
+        document.body.style.overflow = 'auto';
+        const razaoSocial = document.getElementById('razao-social').value;
+        const cnpj = document.getElementById('cnpj').value;
+        document.getElementById('conf-razao-social').textContent = razaoSocial;
+        document.getElementById('conf-cnpj').textContent = cnpj;
+        paginaConfirmacao.style.display = 'flex';
     }
     
     // Função para voltar ao formulário
