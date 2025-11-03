@@ -251,6 +251,7 @@
 
     .evento-encontro .bloco1 {
         display: flex;
+        justify-content: center; /* ADICIONADO CONFORME A ÚLTIMA ATUALIZAÇÃO DO GIT*/
     }
 
     .evento-encontro .img {
@@ -273,6 +274,7 @@
     
     .evento-encontro .bloco2 {
         display: flex;
+        justify-content: center; /* ADICIONADO CONFORME A ÚLTIMA ATUALIZAÇÃO DO GIT*/
     }
 
     .evento-encontro .text2 {
