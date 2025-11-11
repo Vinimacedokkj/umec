@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', function() {
         lastScrollTop = scrollTop;
     });
     window.copyPix = function() {
-        const pixKey = '11917168416';
+        const pixKey = '42.282.532/0001-09';
         if (navigator.clipboard) {
             navigator.clipboard.writeText(pixKey).then(function() {
                 showNotification('Chave PIX copiada com sucesso!', 'success');
@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', function() {
     scrollTopBtn.className = 'scroll-top-btn';
     scrollTopBtn.style.cssText = `position: fixed;
         bottom: 30px;
-        right: 30px;
+        right: 50px;
         width: 50px;
         height: 50px;
         background-color: var(--cor-principal);
