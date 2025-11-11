@@ -55,8 +55,8 @@
 
     <!-- 1º Encontro empresarial Brasil África -->
     <section class="evento-encontro" id="evento-encontro">
-        <h2 id="atencao">ATENÇÃO! PREPARE-SE PARA O NOSSO EVENTO</h2>
-        <h2>1ª CONFERÊNCIA INTERNACIONAL DE EMPRESÁRIOS E EMPREENDEDORISMO SOCIAL BRASIL ÁFRICA</h2>
+        <h2 id="atencao">ATENÇÃO! <br>PREPARE-SE PARA O NOSSO EVENTO</h2>
+        <h2>1ª CONFERÊNCIA INTERNACIONAL DE EMPRESÁRIOS E EMPREENDEDORISMO SOCIAL BRASIL-ÁFRICA</h2>
 
         <div class="logo-primeiro-encontro">
             <img src="/assets/img/logo primeiro encontro.jpg" alt="Logo do evento - primeiro encontro">
@@ -108,22 +108,6 @@
             </p>
             <input type="hidden" name="payment-method" id="payment-method" value="">
             <div class="formulario-card">
-                <div class="formulario-header">
-                    <h2 class="formulario-titulo">Cadastre sua empresa  </h2>
-                    <p class="formulario-subtitulo"><strong>Participe do Primeiro Encontro Internacional de Empresários Brasil-África</strong></p>
-                    <div class="investimento-info">
-                        <p class="descricao-investimento">Valor do investimento para participação de sua empresa</p>
-                        <div class="valor-investimento">
-                            <div class="valor-container">
-                                <span class="moeda">R$</span>
-                                <span class="valor">6.000,00</span>
-                            </div>
-                            <span class="periodo"><b>Para os participantes vindos de outros países que não o Brasil, o pagamento poderá ser feito na recepção do evento no ato do credenciamento, em cartão ou em espécie: US$ 1.200,00 (dólares)</b></span>
-                            <!-- <span class="periodo"><b>For participants coming from countries other than Brazil, payment can be made at the event reception upon registration, by card or in cash: US$ 1,200.00 (dollars)</b></span> -->
-                        </div>
-                    </div>
-                </div>
-
                 <!-- Explicação em português -->
                 <div class="explicacao-evento">
                     <p>
@@ -135,6 +119,40 @@
                         Será anunciado na rede de mídia local do evento e nas redes sociais, gerando um grande impacto para sua empresa
                         e mais oportunidades de negócios
                     </p>
+                </div>
+
+                <div class="formulario-header">
+                    <h2 class="formulario-titulo">Cadastre sua empresa  </h2>
+                    <p class="formulario-subtitulo"><strong>Participe do Primeiro Encontro Internacional de Empresários Brasil-África</strong></p>
+                    <div class="investimento-info">
+
+                        <p class="descricao-investimento">Empresa que ofereça um produto ou serviço</p>
+                        <div class="valor-investimento">
+                            <div class="valor-container">
+                                <span class="moeda">R$</span>
+                                <span class="valor">6.000,00 - BRL</span>
+                            </div>
+                            
+                            <!-- <span class="periodo"><b>Para os participantes vindos de outros países que não o Brasil, o pagamento poderá ser feito na recepção do evento no ato do credenciamento, em cartão ou em espécie: US$ 1.200,00 (dólares)</b></span> -->
+                            <!-- <span class="periodo"><b>For participants coming from countries other than Brazil, payment can be made at the event reception upon registration, by card or in cash: US$ 1,200.00 (dollars)</b></span> -->
+                        </div>
+
+                        <p class="descricao-investimento">Empresa que ofereça mais de um produto ou serviço</p>
+                        <div class="valor-investimento">
+                            <div class="valor-container">
+                                <span class="moeda">R$</span>
+                                <span class="valor">8.000,00 - BRL</span>
+                            </div>
+                        </div>
+
+                        <p class="descricao-investimento">Empresas Internacionais</p>
+                        <div class="valor-investimento">
+                            <div class="valor-container">
+                                <span class="moeda">$</span>
+                                <span class="valor">1.300,00 - USD</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Explicação em inglês -->
@@ -386,7 +404,10 @@
                         <h4>Dados da Empresa</h4>
                         <p><strong>Razão Social:</strong> <span id="modal-razao-social"></span></p>
                         <p><strong>CNPJ:</strong> <span id="modal-cnpj"></span></p>
-                        <p><strong>Valor do Investimento:</strong> <span class="valor-destaque">R$ 6.000,00</span></p>
+                        <p><strong>Valor do Investimento:</strong></p>
+                        <p>1 produto ou serviço: <span class="valor-destaque">R$ 6.000,00 - BRL</span></p>
+                        <p>Mais de 1 produto ou serviço: <span class="valor-destaque">R$ 8.000,00 - BRL</span></p>
+                        <p>Empresa Internacional: <span class="valor-destaque">$ 1.300,00 - USD</span></p>
                     </div>
                     
                     <div class="pagamento-opcoes">
@@ -411,7 +432,7 @@
                             </div>
                             <div class="pix-dados">
                                 <p><strong>Chave PIX:</strong> 42.282.532/0001-09</p>
-                                <p><strong>Valor:</strong> R$ 6.000,00</p>
+                                <!-- <p><strong>Valor:</strong> R$ 6.000,00</p> -->
                                 <div class="timer-pix">
                                     <p><strong>Tempo restante:</strong> <span id="timer-pix">10:00</span></p>
                                 </div>
@@ -428,11 +449,18 @@
                     <div id="area-cartao" class="area-pagamento" style="display: none;">
                         <h4>Pagamento via Cartão de Crédito</h4>
                         <div class="cartao-info">
-                            <p>Para pagamento com cartão de crédito, siga o link abaixo para pagamento:</p>
+                            <p>Para pagamento com cartão de crédito, você pode acessar o link abaixo ou realizar o pagamento no local do evento</p>
                             <!-- <p><strong>Email:</strong> presidencia@umecglobal.org</p> -->
                             <!-- <p><strong>WhatsApp:</strong> (11) 91716-8416</p> -->
-                            <a href="#" target="_blank" onclick="alert('Pagamento via cartão de crédito em implementação!')">Realizar o pagamento</a>
+                            <a href="#" target="_blank" onclick="
+                                alert('Pagamento via cartão de crédito em implementação!');
+                                document.getElementById('contato-pagamento-cartao').innerText = 'Para pagamento via cartão de crédito, entre em contato com o seguinte email: presidencia@umecglobal.org e informe que será realizado presencialmente. Sua inscrição já foi cadastrada com sucesso!'
+                            ">Realizar o pagamento de forma online</a>
+                            <p id="contato-pagamento-cartao"></p>
                         </div>
+                        <button class="btn-confirmar-pix" onclick="confirmarPagamentoPix()">
+                            <i class="fas fa-check"></i> Vou realizar o pagamento no local do evento
+                        </button>
                     </div>
                 </div>
             </div>
@@ -444,15 +472,15 @@
                 <div class="confirmacao-icon">
                     <i class="fas fa-check-circle"></i>
                 </div>
-                <h2>Obrigado por Acreditar na UMEC!</h2>
+                <h2>Obrigado por acreditar na UMEC!</h2>
                 <p class="confirmacao-texto">
                     Sua empresa foi cadastrada com sucesso no 1º Encontro Internacional de Empresários Brasil-África.
                 </p>
                 <div class="detalhes-investimento">
-                    <h3>Detalhes do Investimento</h3>
+                    <h3>Informações da empresa</h3>
                     <p><strong>Empresa:</strong> <span id="conf-razao-social"></span></p>
                     <p><strong>CNPJ:</strong> <span id="conf-cnpj"></span></p>
-                    <p><strong>Valor:</strong> R$ 6.000,00</p>
+                    <!-- <p><strong>Valor:</strong> R$ 6.000,00</p> -->
                 </div>
                 <div class="proximos-passos">
                     <h3>Próximos Passos</h3>

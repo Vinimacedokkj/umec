@@ -209,19 +209,22 @@
         font-family: var(--fonte-texto);
     }
 
-    .evento-encontro #atencao {
+    .evento-encontro h2#atencao {
+        /* border: 6px solid blue; */
         background-color: var(--cor-principal);
         font-weight: 900;
     }
 
     .evento-encontro h2 {
+        /* border: 6px solid green; */
         text-align: center;
-        padding: 40px 80px;
+        padding: 40px 1rem;
         font-size: 1.9rem;
         font-family: var(--fonte-texto);
     }
 
     .evento-encontro .logo-primeiro-encontro {
+        /* border: 6px solid yellow; */
         width: 100%;
         overflow: hidden;
         display: flex;
@@ -231,6 +234,7 @@
     }
 
     .evento-encontro .logo-primeiro-encontro img {
+        /* border: 6px solid red; */
         width: 50%;
         height: auto;
         border-radius: 100%;
@@ -239,19 +243,27 @@
     }
 
     .evento-encontro .container {
+        /* border: 6px solid blue; */
         padding: 0;
         height: auto;
-        display: flex;
-        flex-wrap: wrap;
+        /* display: flex;
+        flex-wrap: wrap; */
+        /* max-width: 1300px; */
+        width: 100%;
+        /* margin: 0; */
     }
 
     .evento-encontro .text {
+        /* border: 6px solid black; */
         padding: 30px;
+        width: 90%;
+        max-width: 1000px;
     }
 
     .evento-encontro .bloco1 {
+        /* border: 6px solid brown; */
         display: flex;
-        justify-content: center; /* ADICIONADO CONFORME A ÚLTIMA ATUALIZAÇÃO DO GIT*/
+        justify-content: center; /* ADICIONADO CONFORME A ÚLTIMA ATUALIZAÇÃO DO GIT */
     }
 
     .evento-encontro .img {
@@ -266,31 +278,32 @@
     }
 
     .evento-encontro .text1 {
-        display: flex;
-        width: 50%;
+        /* border: 6px solid yellow; */
+        display: flex;  
         justify-content: center;
         align-items: center;
     }
     
     .evento-encontro .bloco2 {
+        /* border: 6px solid green; */
         display: flex;
-        justify-content: center; /* ADICIONADO CONFORME A ÚLTIMA ATUALIZAÇÃO DO GIT*/
+        justify-content: center; /* ADICIONADO CONFORME A ÚLTIMA ATUALIZAÇÃO DO GIT */
     }
 
     .evento-encontro .text2 {
-        width: 50%;
+        /* border: 6px solid red; */
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    .evento-encontro .video {
+    /* .evento-encontro .video {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 50%;
-    }
+    } */
 
     .evento-encontro .video video {
         width: auto;
@@ -299,6 +312,7 @@
     }
 
     .evento-encontro .apoiadores {
+        /* border: 6px solid salmon; */
         overflow: hidden;
         display: flex;
         flex-direction: column;
@@ -310,14 +324,15 @@
     }
 
     .evento-encontro .apoiadores .flex-container {
+        /* border: 6px solid yellowgreen; */
         border-color: #979695;
         color: #979695;
         border-radius: 30px;
         display: flex;
         justify-content: center;
         height: 100%;
-        /* width: 70%; */
-        /* transition: transform 1s ease; */
+        width: 70%;
+        transition: transform 1s ease;
         padding: 10px 0;
     }
 
@@ -1957,7 +1972,7 @@
     font-size: 1.5rem;
     color: var(--cor-principal);
     font-weight: 700;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--fonte-texto);
     margin-right: 0.5rem;
 }
 
@@ -2472,7 +2487,7 @@
 }
 
 .pix-dados p {
-    margin-bottom: 0.5rem;
+    margin: 1rem;
     color: var(--cor-texto);
 }
 
@@ -2492,54 +2507,54 @@
     gap: 0.5rem;
 }
 
-        .btn-copiar-pix:hover {
-            background: var(--cor-secundaria);
-            transform: translateY(-1px);
-        }
+.btn-copiar-pix:hover {
+    background: var(--cor-secundaria);
+    transform: translateY(-1px);
+}
 
-        .timer-pix {
-            margin: 1rem 0;
-            padding: 0.5rem;
-            background: rgba(162, 139, 66, 0.1);
-            border-radius: 5px;
-            text-align: center;
-        }
+.timer-pix {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: rgba(162, 139, 66, 0.1);
+    border-radius: 5px;
+    text-align: center;
+}
 
-        .timer-pix p {
-            margin: 0;
-            color: var(--cor-principal);
-            font-weight: 600;
-        }
+.timer-pix p {
+    margin: 0;
+    color: var(--cor-principal);
+    font-weight: 600;
+}
 
-        #timer-pix {
-            font-size: 1.2rem;
-            color: var(--cor-principal);
-            font-weight: 700;
-        }
+#timer-pix {
+    font-size: 1.2rem;
+    color: var(--cor-principal);
+    font-weight: 700;
+}
 
-        .btn-confirmar-pix {
-            background: #27ae60;
-            color: var(--cor-clara);
-            border: none;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-family: 'Inter', sans-serif;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            width: 100%;
-        }
+.btn-confirmar-pix {
+    background: #27ae60;
+    color: var(--cor-clara);
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
 
-        .btn-confirmar-pix:hover {
-            background: #229954;
-            transform: translateY(-1px);
-            box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
-        }
+.btn-confirmar-pix:hover {
+    background: #229954;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(39, 174, 96, 0.3);
+}
 
 .cartao-info {
     text-align: center;
@@ -2548,6 +2563,10 @@
 .cartao-info p {
     margin-bottom: 1rem;
     color: var(--cor-texto);
+}
+
+.cartao-info p#contato-pagamento-cartao {
+    margin: 1rem 0;
 }
 
 /* ===== PÁGINA DE CONFIRMAÇÃO ===== */
