@@ -46,7 +46,7 @@
     .section-title {
         text-align: center;
         margin-bottom: 3rem;
-        font-family: 'Playfair Display', serif;
+        font-family: var(--fonte-destaque);
         font-size: 2.5rem;
         color: var(--cor-titulo);
     }
@@ -773,6 +773,7 @@
 
     .galeria-title {
         margin-top: 50px;
+        font-family: var(--fonte-destaque);
     }
 
     .container-botao-apoie {
@@ -1108,6 +1109,41 @@
         color: var(--cor-clara);
         opacity: 0.6;
         font-family: 'Inter', sans-serif;
+    }
+
+    .footer-watermark {
+        margin-top: 1.5rem;
+        padding-top: 1rem;
+        text-align: center;
+    }
+
+    .watermark-divider {
+        width: 100px;
+        height: 1px;
+        background-color: rgba(255,255,255,0.2);
+        margin: 0 auto 0.75rem;
+    }
+
+    .watermark-text {
+        color: var(--cor-clara);
+        opacity: 0.5;
+        font-size: 0.75rem;
+        margin-bottom: 0.25rem;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+    }
+
+    .watermark-link {
+        color: var(--cor-clara);
+        opacity: 0.5;
+        font-size: 0.7rem;
+        margin-bottom: 0;
+        font-family: 'Inter', sans-serif;
+        font-weight: 300;
+    }
+
+    .watermark-link a {
+        text-decoration: none;
     }
 
     /* ===== RESPONSIVIDADE ===== */
