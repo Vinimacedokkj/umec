@@ -1497,6 +1497,17 @@
         background-color: var(--cor-titulo);
         color: var(--cor-clara);
         padding: 3rem 0 1rem;
+        position: relative;
+    }
+
+    .footer::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--cor-principal), var(--cor-secundaria));
     }
 
     .footer-content {
@@ -1504,28 +1515,50 @@
         grid-template-columns: 2fr 1fr 1fr;
         gap: 3rem;
         margin-bottom: 2rem;
+        align-items: start;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-logo-img {
         height: 60px;
         width: auto;
         margin-bottom: 1rem;
+        display: block;
     }
 
     .footer-logo p {
         color: var(--cor-clara);
         opacity: 0.8;
         max-width: 300px;
+        margin: 0;
+        line-height: 1.6;
+        font-size: 0.95rem;
+    }
+
+    .footer-links {
+        transform: translateX(-20%);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-links h4, .footer-contact h4 {
         color: var(--cor-clara);
         margin-bottom: 1rem;
         font-family: var(--fonte-titulo);
+        font-weight: 700;
+        font-size: 1.1rem;
     }
 
     .footer-links ul {
         list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     .footer-links li {
@@ -1536,18 +1569,29 @@
         color: var(--cor-clara);
         text-decoration: none;
         opacity: 0.8;
-        transition: opacity 0.3s ease;
+        transition: all 0.3s ease;
         font-family: var(--fonte-interface);
+        font-size: 0.95rem;
+        display: inline-block;
     }
 
     .footer-links a:hover {
         opacity: 1;
+        transform: translateX(3px);
+    }
+
+    .footer-contact {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .footer-contact p {
         color: var(--cor-clara);
         opacity: 0.8;
-        margin-bottom: 0.5rem;
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.6;
     }
 
     .footer-bottom {
@@ -1557,10 +1601,16 @@
         color: var(--cor-clara);
         opacity: 0.6;
         font-family: var(--fonte-interface);
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .footer-bottom p {
+        margin: 0;
     }
 
     .footer-watermark {
-        margin-top: 1.5rem;
+        margin-top: 1rem;
         padding-top: 1rem;
         text-align: center;
     }
@@ -1576,9 +1626,16 @@
         color: var(--cor-clara);
         opacity: 0.5;
         font-size: 0.75rem;
-        margin-bottom: 0.25rem;
+        margin: 0;
         font-family: var(--fonte-interface);
         font-weight: 300;
+        text-decoration: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .watermark-text:hover {
+        opacity: 0.8;
+        text-decoration: underline;
     }
 
     .watermark-link {
@@ -1663,7 +1720,7 @@
     
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 2.5rem;
         text-align: center;
     }
     
@@ -1676,23 +1733,29 @@
     }
 
     .footer-logo {
-        /* border: 3px solid salmon; */
         display: flex;
-        flex-flow: column wrap;
-        align-content: center;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
+        text-align: center;
     }
 
-    .footer-logo img {
-        /* border: 3px solid blue; */
-        width: 40%;
-        height: auto;
+    .footer-logo p {
+        max-width: 100%;
+        text-align: center;
     }
 
-    /* .footer-logo p {
-        border: 4px solid yellowgreen;
-    } */
+    .footer-links,
+    .footer-contact {
+        transform: translateX(0%);
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-links ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
     
     .nav.active {
         display: block;
