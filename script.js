@@ -46,11 +46,9 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         if (scrollTop > 100) {
-            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
-            header.style.backdropFilter = 'blur(10px)';
+            header.classList.add('scrolled');
         } else {
-            header.style.backgroundColor = 'var(--cor-clara)';
-            header.style.backdropFilter = 'none';
+            header.classList.remove('scrolled');
         }
         lastScrollTop = scrollTop;
     });
@@ -145,24 +143,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const scrollTopBtn = document.createElement('button');
     scrollTopBtn.innerHTML = '<i class="fas fa-arrow-up"></i>';
     scrollTopBtn.className = 'scroll-top-btn';
-    scrollTopBtn.style.cssText = `position: fixed;
-        bottom: 30px;
-        right: 50px;
-        width: 50px;
-        height: 50px;
-        background-color: var(--cor-principal);
-        color: white;
-        border: none;
-        border-radius: 50%;
-        cursor: pointer;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.2rem;
-        box-shadow: 0 4px 12px rgba(162, 139, 66, 0.3);
-        transition: all 0.3s ease;
-        z-index: 1000;
-    `;
     document.body.appendChild(scrollTopBtn);
     // Mostrar/ocultar botão baseado no scroll
     window.addEventListener('scroll', function() {
@@ -533,15 +513,40 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
     // Botão de confirmação PIX já está no HTML
-    // ===== PRELOADER (opcional) =====
+    // ===== PRELOADER =====
     window.addEventListener('load', function() {
         const preloader = document.querySelector('.preloader');
         if (preloader) {
             preloader.style.opacity = '0';
+            preloader.style.visibility = 'hidden';
             setTimeout(() => {
                 preloader.style.display = 'none';
             }, 500);
         }
+    });
+
+    // ===== ANIMAÇÕES ON SCROLL =====
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observar elementos com animação on scroll
+    document.addEventListener('DOMContentLoaded', function() {
+        const animateElements = document.querySelectorAll('.missao-card, .impacto-item, .projeto-item, .apoio-card, .galeria-item');
+        animateElements.forEach(el => {
+            el.classList.add('animate-on-scroll');
+            observer.observe(el);
+        });
     });
     // ===== VALIDAÇÃO DE FORMULÁRIOS =====
     const formInputs = document.querySelectorAll('input, textarea');
