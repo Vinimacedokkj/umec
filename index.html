@@ -27,6 +27,21 @@
 
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-logo">
+                <img src="/assets/img/logo_reduzida.png" alt="UMEC Logo">
+            </div>
+            <div class="preloader-spinner">
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+                <div class="spinner-ring"></div>
+            </div>
+            <p class="preloader-text">Carregando...</p>
+        </div>
+    </div>
+
     <!-- Header -->
     <header class="header">
         <div class="container">
@@ -505,13 +520,13 @@
             <div class="world-map"></div>
         </div>
         <div class="container">
-            <div class="hero-content">
-                <h1 class="hero-title">U.M.E.C.</h1>
-                <h2 class="hero-subtitle">União Mundial de Ministros do Bem e Empreendedores dos Continentes</h2>
-                <p class="hero-description">
+            <div class="hero-content animate-fade-in-up">
+                <h1 class="hero-title animate-slide-in-left">U.M.E.C.</h1>
+                <h2 class="hero-subtitle animate-slide-in-right">União Mundial de Ministros do Bem e Empreendedores dos Continentes</h2>
+                <p class="hero-description animate-fade-in">
                     Organização que congrega ministros, líderes e empreendedores engajados na promoção do bem-estar social, da solidariedade e do desenvolvimento econômico em diversos continentes.
                 </p>
-                <a href="#quem-somos" class="btn-primary">Conheça o Projeto</a><br><br>
+                <a href="#quem-somos" class="btn-primary animate-scale-in">Conheça o Projeto</a><br><br>
                 <!-- <a href="#quem-somos" class="btn-primary">1º ENCONTRO EMPRESARIAL BRASIL ÁFRICA UMEC</a> -->
             </div>
         </div>
@@ -521,12 +536,12 @@
     <section id="quem-somos" class="quem-somos">
         <div class="container">
             <div class="quem-somos-content">
-                <div class="quem-somos-visual">
+                <div class="quem-somos-visual animate-fade-in-left">
                     <div class="logo-grande">
                         <img src="/assets/img/logo.png" alt="U.M.E.C. Logo Grande" class="logo-grande-img">
                     </div>
                 </div>
-                <div class="quem-somos-texto">
+                <div class="quem-somos-texto animate-fade-in-right">
                     <h2 class="section-title">Quem Somos</h2>
                     <div class="text-content">
                         <p>
@@ -575,14 +590,14 @@
     <!-- Missão -->
     <section id="missao" class="missao">
         <div class="container">
-            <h2 class="section-title">Nossa Missão</h2>
+            <h2 class="section-title animate-fade-in-up">Nossa Missão</h2>
             <!-- <div class="missao-intro">
                 <p class="missao-destaque">
                     Paz, Desenvolvimento e solidariedade Global
                 </p>
             </div> -->
             <div class="missao-content">
-                <div class="missao-card missao-principal">
+                <div class="missao-card missao-principal animate-scale-in">
                     <div class="missao-icon">
                         <i class="fas fa-globe"></i>
                     </div>
@@ -602,7 +617,7 @@
                     </div> -->
                 </div>
                 <div class="missao-cards-secundarios">
-                    <div class="missao-card">
+                    <div class="missao-card animate-fade-in-up" style="animation-delay: 0.1s;">
                         <div class="missao-icon">
                             <i class="fas fa-handshake"></i>
                         </div>
@@ -611,7 +626,7 @@
                             Conectamos ministros e empreendedores de diferentes nações, fortalecendo parcerias para promover projetos sociais, políticas públicas e desenvolvimento sustentável.
                         </p>
                     </div>
-                    <div class="missao-card">
+                    <div class="missao-card animate-fade-in-up" style="animation-delay: 0.2s;">
                         <div class="missao-icon">
                             <i class="fa-solid fa-people-group"></i>
                         </div>
@@ -620,7 +635,7 @@
                             Atuar com projetos sociais e humanitários junto a comunidades vulneráveis, órgãos públicos e instituições parceiras;
                         </p>
                     </div>
-                    <div class="missao-card">
+                    <div class="missao-card animate-fade-in-up" style="animation-delay: 0.3s;">
                         <div class="missao-icon">
                             <i class="fa-solid fa-graduation-cap"></i>
                         </div>
@@ -629,7 +644,7 @@
                             Realizar congressos, fóruns, cursos, capacitações e encontros internacionais com foco na formação ética, empreendedora e humanitária;
                         </p>
                     </div>
-                    <div class="missao-card">
+                    <div class="missao-card animate-fade-in-up" style="animation-delay: 0.4s;">
                         <div class="missao-icon">
                             <i class="fa-solid fa-dove"></i>
                         </div>
@@ -647,7 +662,7 @@
                             Desenvolver parcerias com governos, ONGs, empresas e organismos internacionais para impulsionar políticas públicas, ações de impacto social e desenvolvimento econômico sustentável;
                         </p>
                     </div> -->
-                    <div class="missao-card">
+                    <div class="missao-card animate-fade-in-up" style="animation-delay: 0.5s;">
                         <div class="missao-icon">
                             <i class="fas fa-globe"></i>
                         </div>
@@ -656,7 +671,7 @@
                             Oferecer suporte e representatividade internacional a ministros, capelães, líderes comunitários e empreendedores comprometidos com o bem;
                         </p>
                     </div>
-                    <div class="missao-card">
+                    <div class="missao-card animate-fade-in-up" style="animation-delay: 0.6s;">
                         <div class="missao-icon">
                             <i class="fas fa-hand-fist"></i>
                         </div>
@@ -1300,9 +1315,9 @@
                 <div class="redes-sociais">
                     <h4>Redes Sociais</h4>
                     <div class="social-links">
-                        <a href="#" class="social-link" onclick="alert('Instagram terá mais novidades em breve!')">
+                        <a href="https://www.instagram.com/umec_global/" class="social-link" target="_blank">
                             <i class="fab fa-instagram"></i>
-                            <span>@umec.oficial</span>
+                            <span>@umecglobal</span>
                         </a>
                         <a href="#" class="social-link" onclick="alert('Nossa página do Facebook terá mais novidades em breve!')">
                             <i class="fab fa-facebook"></i>
@@ -1376,9 +1391,9 @@
                 <p>&copy; 2025 U.M.E.C. Todos os direitos reservados.</p>
             </div>
             <div class="footer-watermark">
-                <div class="watermark-divider"></div>
-                <p class="watermark-text">desenvolvido por nivontech</p>
-                <a href="https://www.nivontech.com" class="watermark-link" target="_blank">www.nivontech.com</a>
+                <!-- <div class="watermark-divider"></div> -->
+                <a href="https://www.nivontech.com" class="watermark-text" target="_blank">desenvolvido por nivontech</a>
+                <!-- <a href="https://www.nivontech.com" class="watermark-link" target="_blank">www.nivontech.com</a> -->
             </div>
         </div>
     </footer>
